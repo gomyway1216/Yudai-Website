@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 const getProjects = graphql`
   query {
-	projects: allContentfulProjects(filter: {featured: {eq: true}}) {
+	projects: allContentfulProjects {
     edges {
       node {
         contentful_id

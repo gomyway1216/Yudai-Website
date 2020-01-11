@@ -42,7 +42,7 @@ const FeaturedProjects = () => {
         })}
       </div>
 
-      <AniLink fade to="/tours" className="btn-primary">
+      <AniLink fade to="/projects" className="btn-primary">
         All Projects
       </AniLink>
     </section>

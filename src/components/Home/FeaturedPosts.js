@@ -39,7 +39,7 @@ const FeaturedPosts = () => {
         })}
       </div>
 
-      <AniLink fade to="/tours" className={"btn-primary {styles.center}" + styles.center} >
+      <AniLink fade to="/blogs" className={"btn-primary {styles.center}" + styles.center} >
         All Posts
       </AniLink>
     </section>

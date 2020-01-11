@@ -9,7 +9,7 @@ module.exports = {
     author: "@yudai",
     twitterUsername: "@yyaguchi",
     image: "/defaultBcg.jpeg",
-    siteUrl: "https://backroads-yudai.netlify.com",
+    siteUrl: "https://yudai-blog.netlify.com",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -32,8 +32,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://backroads-yudai.netlify.com",
-        sitemap: "https://backroads-yudai.netlify.com/sitemap.xml",
+        host: "https://yudai-blog.netlify.com",
+        sitemap: "https://yudai-blog.netlify.com/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },

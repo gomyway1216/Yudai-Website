@@ -1,0 +1,18 @@
+.profile {
+  display: flex;
+  flex-direction: row;
+  margin: 5%;
+
+  .left {
+    .imageContainer {
+      max-width: 200px;
+      max-height: 200px;
+    }
+    .temp {
+      background-color: black;
+    }
+  }
+
+  .right {
+  }
+}

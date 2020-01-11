@@ -1,10 +1,10 @@
-import React from "react"
-import Title from "../Title"
-import styles from "../../css/about.module.css"
-// import img from "../../images/defaultBcg.jpeg"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import React from 'react'
+import Title from '../Title'
+import styles from '../../css/about.module.css'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
+
 const getAbout = graphql`
   query aboutImage {
     aboutImage: file(relativePath: { eq: "profile_image.jpg" }) {
@@ -26,7 +26,6 @@ const About = () => {
       <div className={styles.aboutCenter}>
         <article className={styles.aboutImg}>
           <div className={styles.imgContainer}>
-            {/* <img src={img} alt="about company" /> */}
             <Img
               fluid={aboutImage.childImageSharp.fluid}
               alt="profile picture"
@@ -38,23 +37,19 @@ const About = () => {
           <p>Education</p>
           <line />
           <p>
-            Computer Science Major with Math and Entrepreneurship Minor from University of Wisconsin-Madison
+            Computer Science Major with Math and Entrepreneurship Minor from
+            University of Wisconsin-Madison
           </p>
           <p>Work Experience</p>
-          <p>
-            Front-End Engineer/Data Science Intern at SMN | Tokyo, Japan
-          </p>
+          <p>Front-End Engineer/Data Science Intern at SMN | Tokyo, Japan</p>
           <p>
             Full-Stack at at UW-Madison College of Engineering | Madison, WI
           </p>
-          <p>
-            Full Stack Engineer Intern at Kinetikos | Lisbon, Portugal 
-          </p>
-          
-          <AniLink fade to="/about" className="btn-primary">
+          <p>Full Stack Engineer Intern at Kinetikos | Lisbon, Portugal</p>
+
+          <AniLink fade to="/profile" className="btn-primary">
             more details
           </AniLink>
-
         </article>
       </div>
     </section>

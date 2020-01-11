@@ -13,11 +13,9 @@ const Blog = ({ data }) => {
     published,
     text: { json },
   } = data.post
-
   const options = {
     renderNode: {
       "embedded-asset-block": node => {
-
         return (
           <div className="rich">
             <h3>this is awesome image</h3>
@@ -28,6 +26,7 @@ const Blog = ({ data }) => {
       },
       "embedded-entry-block": node => {
         const { title, image, text } = node.data.target.fields
+        console.log(text)
 
         return (
           <div>

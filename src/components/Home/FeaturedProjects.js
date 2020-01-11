@@ -34,7 +34,7 @@ const FeaturedProjects = () => {
 
   return (
     <section className={styles.projects}>
-      <Title title="featured" subtitle="blogs" />
+      <Title title="featured" subtitle="projects" />
       <div className={styles.center}>
         {projects.map(({ node }) => {
         //   return <Tour key={node.contentful_id} tour={node} />

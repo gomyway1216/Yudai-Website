@@ -13,9 +13,7 @@ const Blog = ({ data }) => {
     published,
     text: { json },
   } = data.post
-  // this is for debugging
-  console.log("this is for debugging")
-  console.log(data.post)
+
   const options = {
     renderNode: {
       "embedded-asset-block": node => {

@@ -36,12 +36,11 @@ const Project = ({ project }) => {
         <h3>{title}</h3>
         <div className={styles.info}>
           <h4 className={styles.country}>
-            <FaMap className={styles.icon} />
             {shortDescription || "default project"}
           </h4>
           <div className={styles.details}>
-            <h6>{category} days</h6>
-            <h6>from ${createdAt}</h6>
+            <h6>{category}</h6>
+            <h6>${createdAt}</h6>
           </div>
         </div>
       </div>

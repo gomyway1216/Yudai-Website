@@ -33,7 +33,7 @@ const FeaturedProjects = () => {
   const projects = response.featuredProjects.edges
 
   return (
-    <section className={styles.tours}>
+    <section className={styles.projects}>
       <Title title="featured" subtitle="blogs" />
       <div className={styles.center}>
         {projects.map(({ node }) => {

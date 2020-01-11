@@ -4,9 +4,10 @@ import styles from "../../css/about.module.css"
 // import img from "../../images/defaultBcg.jpeg"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 const getAbout = graphql`
   query aboutImage {
-    aboutImage: file(relativePath: { eq: "defaultBcg.jpeg" }) {
+    aboutImage: file(relativePath: { eq: "profile_image.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid_tracedSVG
@@ -21,30 +22,39 @@ const About = () => {
 
   return (
     <section className={styles.about}>
-      <Title title="about" subtitle="us" />
+      <Title title="about" subtitle="me" />
       <div className={styles.aboutCenter}>
         <article className={styles.aboutImg}>
           <div className={styles.imgContainer}>
             {/* <img src={img} alt="about company" /> */}
             <Img
               fluid={aboutImage.childImageSharp.fluid}
-              alt="awesome landscape"
+              alt="profile picture"
             />
           </div>
         </article>
         <article className={styles.aboutInfo}>
-          <h4>explore the difference</h4>
+          <h4>I am English&Japanese bilingual studying Computer Science.</h4>
+          <p>Education</p>
+          <line />
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla
-            doloribus enim necessitatibus?
+            Computer Science Major with Math and Entrepreneurship Minor from University of Wisconsin-Madison
+          </p>
+          <p>Work Experience</p>
+          <p>
+            Front-End Engineer/Data Science Intern at SMN | Tokyo, Japan
           </p>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla
-            doloribus enim necessitatibus?
+            Full-Stack at at UW-Madison College of Engineering | Madison, WI
           </p>
-          <button type="button" className="btn-primary">
-            read more
-          </button>
+          <p>
+            Full Stack Engineer Intern at Kinetikos | Lisbon, Portugal 
+          </p>
+          
+          <AniLink fade to="/about" className="btn-primary">
+            more details
+          </AniLink>
+
         </article>
       </div>
     </section>

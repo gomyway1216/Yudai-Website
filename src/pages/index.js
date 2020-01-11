@@ -18,7 +18,7 @@ export default ({ data }) => (
         title="Welcome to Yudai's Blog"
         info="My goal is to create platform that help people."
       >
-        <AniLink fade to="/tours" className="btn-white">
+        <AniLink fade to="/projects" className="btn-white">
           My projects
         </AniLink>
       </Banner>

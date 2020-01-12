@@ -1,99 +1,113 @@
 .profile {
-  display: flex;
-  flex-direction: row;
-  margin: 3%;
-  font-size: large;
+  padding: 4rem 0;
+  .profile-main {
+    display: flex;
+    flex-direction: row;
+    margin: 3%;
+    font-size: large;
+    //   background: var(--mainGrey);
 
-  //   background: var(--mainGrey);
-
-  .left {
-    // width: 50%;
-    // height: 50%;
-    flex: 1;
-    .image-container {
-      //   width: 400px;
-      //   height: 400px;
-      //   max-width: 400px;
-      //   max-height: 400px;
-    }
-  }
-
-  .right {
-    flex-direction: column;
-    // margin: 20px;
-    margin: 0 20px 0 20px;
-    flex: 2;
-
-    .resume-link {
-      font-size: x-large;
-      font-weight: bold;
+    .left {
+      // width: 50%;
+      // height: 50%;
+      flex: 1;
+      .image-container {
+        //   width: 400px;
+        //   height: 400px;
+        //   max-width: 400px;
+        //   max-height: 400px;
+      }
     }
 
-    //   margin: 20px 10px 20px 10px;
+    .right {
+      // flex-direction: column;
+      // margin: 20px;
+      margin: 0 20px 0 20px;
+      flex: 2;
 
-    .item {
-      margin-bottom: 40px;
-    }
-    // .titles {
-    // }
-    .work {
-      // background: var(--mainGrey);
-    }
+      .resume-link {
+        font-size: x-large;
+        font-weight: bold;
+      }
 
-    .research {
-      //   background: var(--mainGrey);
-    }
+      .bold-text {
+        margin-left: 2px;
+        margin-right: 2px;
+        font-weight: bold;
+      }
 
-    .organization {
-      background: var(--mainGrey);
-    }
+      .education-info {
+        display: flex;
+        flex-direction: row;
+        //   justify-content: space-between;
 
-    .projectLinkAll {
-      font-weight: bold;
-      font-size: x-large;
-    }
+        .education-info-main {
+          flex-direction: column;
+        }
 
-    .project-link {
-      font-weight: bold;
-      font-size: large;
-    }
+        .education-sub-info {
+          text-align: right;
+          // flex-direction: row;
+        }
+      }
 
-    .information {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      //   flex-wrap: wrap;
-      //   justify-content: flex-end;
+      //   margin: 20px 10px 20px 10px;
 
-      .position {
+      .item {
+        margin-bottom: 40px;
+      }
+
+      .organization {
+        background: var(--mainGrey);
+      }
+
+      .projectLinkAll {
         font-weight: bold;
         font-size: x-large;
-        // margin: 10px;
       }
 
-      .sub-information {
-        flex-direction: column;
-        // margin-right: 10px;
-        // text-align: right;
-        .company {
+      .project-link {
+        font-weight: bold;
+        font-size: large;
+      }
+
+      .information {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        //   flex-wrap: wrap;
+        //   justify-content: flex-end;
+
+        .position {
+          font-weight: bold;
+          font-size: x-large;
           // margin: 10px;
-          text-align: right;
         }
 
-        .location {
-          margin-left: 10px;
-          text-align: right;
+        .sub-information {
+          flex-direction: column;
+          // margin-right: 10px;
+          // text-align: right;
+          .company {
+            // margin: 10px;
+            text-align: right;
+          }
+
+          .location {
+            margin-left: 10px;
+            text-align: right;
+          }
         }
       }
-    }
 
-    .skills {
-      text-align: right;
+      .skills {
+        text-align: right;
+      }
     }
+    // .s .spans-bottom {
+    //   display: flex;
+    //   flex-wrap: wrap;
+    //   justify-content: flex-end;
+    // }
   }
-  // .s .spans-bottom {
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   justify-content: flex-end;
-  // }
 }

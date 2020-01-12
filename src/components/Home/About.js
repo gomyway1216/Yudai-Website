@@ -43,7 +43,8 @@ const About = () => {
           <p>Work Experience</p>
           <p>Front-End Engineer/Data Science Intern at SMN | Tokyo, Japan</p>
           <p>
-            Full-Stack at at UW-Madison College of Engineering | Madison, WI
+            Full-Stack Engineer at UW-Madison College of Engineering | Madison,
+            WI
           </p>
           <p>Full Stack Engineer Intern at Kinetikos | Lisbon, Portugal</p>
 

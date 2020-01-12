@@ -74,7 +74,9 @@ const Profile = ({ data }) => {
               </div>
               <p>
                 Building the Front-End of a tutor scheduling system for students
-                with the feature for managers to control the service
+                with the feature for managers to control the service Rebuilding
+                the middleware and backend API that handles the requests from
+                the front-end server
               </p>
             </section>
             <section>

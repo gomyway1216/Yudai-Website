@@ -1,15 +1,15 @@
-require("dotenv").config({
+require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 module.exports = {
   siteMetadata: {
-    title: "BackRoads",
+    title: "Yudai's Blog",
     description:
-      "Explore awesome worldwide tours & discover what makes each of them unique. Forget your daily routine & say yes to adventure",
-    author: "@yudai",
-    twitterUsername: "@yyaguchi",
-    image: "/defaultBcg.jpeg",
-    siteUrl: "https://yudai-blog.netlify.com",
+      'Explore awesome worldwide tours & discover what makes each of them unique. Forget your daily routine & say yes to adventure',
+    author: '@yudai',
+    twitterUsername: '@yyaguchi',
+    image: '/defaultBcg.jpeg',
+    siteUrl: 'https://yudai-blog.netlify.com',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -30,11 +30,11 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-robots-txt",
+      resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: "https://yudai-blog.netlify.com",
-        sitemap: "https://yudai-blog.netlify.com/sitemap.xml",
-        policy: [{ userAgent: "*", allow: "/" }],
+        host: 'https://yudai-blog.netlify.com',
+        sitemap: 'https://yudai-blog.netlify.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
       },
     },
     `gatsby-transformer-sharp`,

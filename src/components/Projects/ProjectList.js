@@ -31,7 +31,6 @@ export default class ProjectList extends Component {
   }
 
   render() {
-    console.log('for debugging', this.state.sortedProjects)
     return (
       <section className={styles.tours}>
         <Title title="My" subtitle="projects" />

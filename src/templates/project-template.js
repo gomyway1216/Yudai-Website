@@ -38,7 +38,6 @@ const Template = ({ data }) => {
       },
       'embedded-entry-block': node => {
         const { title, image, text } = node.data.target.fields
-        console.log(text)
 
         return (
           <div>

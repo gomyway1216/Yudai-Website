@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'gatsby-image'
-import styles from '../../css/tour.module.css'
+import styles from '../../css/projects-home.module.css'
 import { FaMap } from 'react-icons/fa'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import PropTypes from 'prop-types'
@@ -34,7 +34,6 @@ const Project = ({ project }) => {
   let date = new Date(completedAt)
   let formatted_date =
     date.getMonth() + 1 + '-' + date.getDate() + '-' + date.getFullYear()
-  console.log(formatted_date)
 
   return (
     <article className={styles.tour}>
@@ -51,7 +50,7 @@ const Project = ({ project }) => {
             {shortDescription || 'default project'}
           </h4>
           <div className={styles.details}>
-            <h6>{category}</h6>
+            <h6 className={styles.category}>Category: {category}</h6>
             <h6>Created At {formatted_date}</h6>
           </div>
         </div>

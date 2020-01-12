@@ -1,15 +1,14 @@
-import React from "react"
-import Layout from "../components/Layout"
-import Banner from "../components/Banner"
-import About from "../components/Home/About"
-import Services from "../components/Home/Services"
-import StyledHero from "../components/StyledHero"
-import { graphql } from "gatsby"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import React from 'react'
+import Layout from '../components/Layout'
+import Banner from '../components/Banner'
+import About from '../components/Home/About'
+import StyledHero from '../components/StyledHero'
+import { graphql } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 // import FeaturedTours from "../components/Home/FeaturedTours"
-import FeaturedProjects from "../components/Home/FeaturedProjects"
-import FeaturedPosts from "../components/Home/FeaturedPosts"
-import SEO from "../components/SEO"
+import FeaturedProjects from '../components/Home/FeaturedProjects'
+import FeaturedPosts from '../components/Home/FeaturedPosts'
+import SEO from '../components/SEO'
 export default ({ data }) => (
   <Layout>
     <SEO title="Home" />

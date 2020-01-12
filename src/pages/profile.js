@@ -42,19 +42,20 @@ const Profile = ({ data }) => {
               alt="profile picture"
             />
           </div>
-          <div className={styles.temp}>this is temporal container</div>
         </div>
+
         <div className={styles.right}>
-          <h2>Introduction</h2>
+          <div className={[styles.introduction, styles.item].join(' ')}>
+            <h2>Introduction</h2>
 
-          <div>
-            I am aiming to be an engineer and participating in the projects that
-            help people. I believe what I share in this blog could help
-            somebody.
+            <div>
+              I am aiming to be an engineer and participating in the projects
+              that help people. Thank you for visiting my website!
+            </div>
+            <br />
           </div>
-          <br />
 
-          <div>
+          <div className={[styles.work, styles.item].join(' ')}>
             <h3>Work Experience</h3>
             <hr />
             <section>
@@ -118,7 +119,7 @@ const Profile = ({ data }) => {
             </section>
           </div>
 
-          <div>
+          <div className={[styles.research, styles.item].join(' ')}>
             <h3>Research Experience</h3>
             <hr />
             <section>
@@ -147,7 +148,7 @@ const Profile = ({ data }) => {
             </section>
           </div>
 
-          <div>
+          <div className={styles.organization}>
             <h3>Organization</h3>
             <hr />
             <section>

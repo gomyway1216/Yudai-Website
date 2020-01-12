@@ -3,10 +3,17 @@
   flex-direction: row;
   margin: 5%;
 
+  //   background: var(--mainGrey);
+
   .left {
-    .imageContainer {
-      max-width: 200px;
-      max-height: 200px;
+    // width: 50%;
+    // height: 50%;
+    flex: 1;
+    .image-container {
+      //   width: 400px;
+      //   height: 400px;
+      //   max-width: 400px;
+      //   max-height: 400px;
     }
     .temp {
       background-color: black;
@@ -14,5 +21,26 @@
   }
 
   .right {
+    flex-direction: column;
+    // margin: 20px;
+    margin: 0 20px 0 20px;
+    flex: 2;
+
+    .item {
+      margin-bottom: 40px;
+    }
+    // .titles {
+    // }
+    .work {
+      background: var(--mainGrey);
+    }
+
+    .research {
+      //   background: var(--mainGrey);
+    }
+
+    .organization {
+      background: var(--mainGrey);
+    }
   }
 }

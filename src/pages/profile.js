@@ -30,10 +30,6 @@ const Profile = ({ data }) => {
       <Title title="about" subtitle="me" />
       {/* <SEO title="About me" /> */}
       {/* <StyledHero img={data.contactBcg.childImageSharp.fluid} /> */}
-      <div>
-        this page is still under construction. So, the contents here is not the
-        final ones.
-      </div>
 
       <div className={styles.profile}>
         <div className={styles.left}>
@@ -57,6 +53,9 @@ const Profile = ({ data }) => {
               Please feel free to message me on any medias above or through
               email! Thank you for visiting my website!
             </div>
+            <a href="https://drive.google.com/uc?export=download&id=1qho_ioHcWKb5sfXr9mX3A3JLmV2cImKi">
+              Direct download like of my resume
+            </a>
             <br />
           </div>
 
@@ -250,6 +249,9 @@ const Profile = ({ data }) => {
                   <span className={styles.location}>Madison, WI</span>
                 </div>
               </div>
+              <AniLink fade className={styles.projectLink} to={`/project/yolo`}>
+                Jump to project page
+              </AniLink>
               <p>
                 I have fed alloy images to YOLOv3 network, detected the defects
                 in the TEM videos, and tracked their number and size I have also

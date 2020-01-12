@@ -1,9 +1,9 @@
-import React, { useState } from "react"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
-import styles from "../css/navbar.module.css"
-import { FaAlignRight } from "react-icons/fa"
-import links from "../constants/links"
-import socialIcons from "../constants/social-icons"
+import React, { useState } from 'react'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import styles from '../css/navbar.module.css'
+import { FaAlignRight } from 'react-icons/fa'
+import links from '../constants/links'
+import socialIcons from '../constants/social-icons'
 
 const Navbar = () => {
   const [isOpen, setNav] = useState()
@@ -16,7 +16,9 @@ const Navbar = () => {
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
           {/* <img src={logo} alt="backroads logo" /> */}
-          <AniLink to={`/`}>Yudai's Blog</AniLink>
+          <AniLink to={`/`} className={styles.blogTitle}>
+            Yudai's Blog
+          </AniLink>
           <button type="button" className={styles.logoBtn} onClick={toggleNav}>
             <FaAlignRight className={styles.logoIcon} />
           </button>

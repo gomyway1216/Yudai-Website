@@ -7,10 +7,10 @@ export default [
     path: '/projects',
     text: 'projects',
   },
-  {
-    path: '/blog',
-    text: 'blog',
-  },
+  // {
+  //   path: '/blog',
+  //   text: 'blog',
+  // },
   {
     path: '/blogs',
     text: 'blogs',

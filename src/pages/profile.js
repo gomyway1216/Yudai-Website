@@ -50,8 +50,12 @@ const Profile = ({ data }) => {
             <h2>Introduction</h2>
 
             <div>
-              I am aiming to be an engineer and participating in the projects
-              that help people. Thank you for visiting my website!
+              I am a English/Japanese Bilingual college student at University of
+              Wisconsin-Madison. I am aiming to be an software engineer and
+              participate in the projects that help many people.
+              <br />
+              Please feel free to message me on any medias above or through
+              email! Thank you for visiting my website!
             </div>
             <br />
           </div>
@@ -153,22 +157,98 @@ const Profile = ({ data }) => {
                 Android Application to teach interns about company practice
               </p>
             </section>
+
+            <section>
+              <div className={styles.information}>
+                <div className={styles.position}>Ambassador</div>
+                <div className={styles.subInformation}>
+                  <div className={styles.company}>Venture Café Tokyo</div>
+                  <span className={styles.duration}>June 2019 - Present</span>
+                  <span className={styles.location}>Tokyo, Japan</span>
+                </div>
+              </div>
+              <p>
+                Venture Cafe is a place for people to make connections, who are
+                interested in entrepreneurship and those who are participating
+                in the business fields related to it. Our goal is to provide a
+                place that people can argue the issues and provide solutions to
+                them.
+                <br />
+                We organize events every week, and each week has different
+                topics and sessions. I am helping setting up and cleaning up the
+                place, connecting people, and providing drinks.
+              </p>
+            </section>
+
+            <section>
+              <div className={styles.information}>
+                <div className={styles.position}>Private Tutor</div>
+                <div className={styles.subInformation}>
+                  <div className={styles.company}>Self Employed</div>
+                  <span className={styles.duration}>
+                    May 2016 - August 2016
+                  </span>
+                  <span className={styles.location}>Tokyo, Japan</span>
+                </div>
+              </div>
+              <p>
+                Tutored a high school student by providing materials for high
+                school exams Mostly focused on reviewing the class materials and
+                homework for Math, Science, History, Reading Japanese, English
+                classes
+                <br />
+                <br />
+                Gave appropriate homework to prepare for midterm exams and final
+                exams. The student's score increased from the bottom to the
+                average among the same grade students
+                <br />
+                <br />
+                Taught time management techniques and entrance exam strategies
+              </p>
+            </section>
+
+            <section>
+              <div className={styles.information}>
+                <div className={styles.position}>Professional Tutor</div>
+                <div className={styles.subInformation}>
+                  <div className={styles.company}>Elve gakuin</div>
+                  <span className={styles.duration}>
+                    April 2016 - August 2016
+                  </span>
+                  <span className={styles.location}>Tokyo, Japan</span>
+                </div>
+              </div>
+              <p>
+                Venture Cafe is a place for people to make connections, who are
+                interested in entrepreneurship and those who are participating
+                in the business fields related to it. Our goal is to provide a
+                place that people can argue the issues and provide solutions to
+                them.
+                <br />
+                We organize events every week, and each week has different
+                topics and sessions. I am helping setting up and cleaning up the
+                place, connecting people, and providing drinks.
+              </p>
+            </section>
           </div>
 
           <div className={[styles.research, styles.item].join(' ')}>
             <h3>Research Experience</h3>
             <hr />
+
             <section>
-              <div>
-                <span>
+              <div className={styles.information}>
+                <div className={styles.position}>
                   Undergraduate Machine Learning Researcher at Informatics
                   Skunkworks
-                </span>
-                <span>
-                  UW-Madison Department of Materials Science and Engineering
-                </span>
-                <span>Madison, WI</span>
-                <span>Jan 2019 - May 2019</span>
+                </div>
+                <div className={styles.subInformation}>
+                  <div className={styles.company}>
+                    UW-Madison Department of Materials Science and Engineering
+                  </div>
+                  <span className={styles.duration}>Jan 2019 - May 2019</span>
+                  <span className={styles.location}>Madison, WI</span>
+                </div>
               </div>
               <p>
                 I have fed alloy images to YOLOv3 network, detected the defects
@@ -189,49 +269,63 @@ const Profile = ({ data }) => {
           <div className={styles.organization}>
             <h3>Organization</h3>
             <hr />
+
             <section>
-              <div>
-                <span>Tech Lead</span>
-                <span>Helios</span>
-                <span>Madison, WI</span>
-                <span>Jan 2018 - Present</span>
+              <div className={styles.information}>
+                <div className={styles.position}>Tech Lead</div>
+                <div className={styles.subInformation}>
+                  <div className={styles.company}>Helios</div>
+                  <span className={styles.duration}>Jan 2018 - Present</span>
+                  <span className={styles.location}>Madison, WI</span>
+                </div>
               </div>
               <p>
                 Developing a dashboard that collects solar panel information and
-                displays it throughout the university with fun metric Working on
-                open sourcing the solar data for researchers and/or students to
-                use as part of dashboard project
+                displays it throughout the university with fun metric
+                <br />
+                <br />
+                Working on open sourcing the solar data for researchers and/or
+                students to use as part of dashboard project
               </p>
             </section>
-            <br />
+
             <section>
-              <div>
-                <span>Assistant Social Char & Photographer</span>
-                <span>Kappa Eta Kappa Delta Chapter </span>
-                <span>Madison, WI</span>
-                <span>Jan 2018 - Present</span>
+              <div className={styles.information}>
+                <div className={styles.position}>
+                  Assistant Social Char & Photographer
+                </div>
+                <div className={styles.subInformation}>
+                  <div className={styles.company}>
+                    Kappa Eta Kappa Delta Chapter
+                  </div>
+                  <span className={styles.duration}>Jan 2018 - Present</span>
+                  <span className={styles.location}>Madison, WI</span>
+                </div>
               </div>
               <p>
                 This is an Engineering Professional Fraternity. As being the
                 smallest minority, I have been leading people to learn about
-                minorities and different cultures. I have created an environment
-                that people respect individuals with diverse backgrounds and
-                enriched the college experience for everyone.
+                minorities and different cultures.
+                <br />I have created an environment that people respect
+                individuals with diverse backgrounds and enriched the college
+                experience for everyone.
               </p>
-              <div>http://delta.khk.org/</div>
               <a href={`http://delta.khk.org/`}>Link to KHK</a>
             </section>
-            <br />
+
             <section>
-              <div>
-                <span>Active Member</span>
-                <span>Bridge</span>
-                <span>Madison, WI</span>
-                <span>Sep 2017 - May 2018</span>
+              <div className={styles.information}>
+                <div className={styles.position}>Active Member</div>
+                <div className={styles.subInformation}>
+                  <div className={styles.company}>Bridge</div>
+                  <span className={styles.duration}>Sep 2017 - May 2018</span>
+                  <span className={styles.location}>Madison, WI</span>
+                </div>
               </div>
               <p>
                 This is a Organization that connects domestic and international
-                students. I was in charge of leading teams and won a most active
+                students.
+                <br />I was in charge of leading teams and won a most active
                 student award of the semester.
               </p>
               <a href={`https://bridge.iss.wisc.edu/`}>Link to Bridge</a>

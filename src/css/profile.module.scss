@@ -1,7 +1,7 @@
 .profile {
   display: flex;
   flex-direction: row;
-  margin: 5%;
+  margin: 3%;
   font-size: large;
 
   //   background: var(--mainGrey);
@@ -24,13 +24,15 @@
     margin: 0 20px 0 20px;
     flex: 2;
 
+    //   margin: 20px 10px 20px 10px;
+
     .item {
       margin-bottom: 40px;
     }
     // .titles {
     // }
     .work {
-      background: var(--mainGrey);
+      // background: var(--mainGrey);
     }
 
     .research {
@@ -41,30 +43,38 @@
       background: var(--mainGrey);
     }
 
-    .spans-top {
+    .information {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
+      flex-direction: row;
+      justify-content: space-between;
+      //   flex-wrap: wrap;
+      //   justify-content: flex-end;
+
+      .position {
+        font-weight: bold;
+        font-size: x-large;
+        // margin: 10px;
+      }
+
+      .sub-information {
+        flex-direction: column;
+        // margin-right: 10px;
+        // text-align: right;
+        .company {
+          // margin: 10px;
+          text-align: right;
+        }
+
+        .location {
+          margin-left: 10px;
+          text-align: right;
+        }
+      }
     }
-
-    .spans-bottom {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
   }
-
-  .position {
-    font-weight: bold;
-    font-size: x-large;
-  }
-
-  .company {
-  }
-
-  .location {
-  }
-
-  .duration {
-  }
+  // .s .spans-bottom {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   justify-content: flex-end;
+  // }
 }

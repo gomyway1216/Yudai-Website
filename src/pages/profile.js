@@ -60,70 +60,97 @@ const Profile = ({ data }) => {
             <h3>Work Experience</h3>
             <hr />
             <section>
-              <div>
-                <div className={styles.spansTop}>
-                  <div className={styles.position}>Full-Stack Engineer</div>
+              <div className={styles.information}>
+                <div className={styles.position}>Full-Stack Engineer</div>
+                <div className={styles.subInformation}>
                   <div className={styles.company}>
                     University of Wisconsin-Madison
                   </div>
-                </div>
-                <div className={styles.spansBottom}>
-                  <span className={styles.location}>Madison, WI</span>
                   <span className={styles.duration}>April 2019 - Present</span>
+                  <span className={styles.location}>Madison, WI</span>
                 </div>
               </div>
               <p>
                 Building the Front-End of a tutor scheduling system for students
-                with the feature for managers to control the service Rebuilding
-                the middleware and backend API that handles the requests from
-                the front-end server
+                with the feature for managers to control the service
+                <br />
+                <br />
+                Rebuilding the middleware and backend API that handles the
+                requests from the front-end server
               </p>
             </section>
+
             <section>
-              <div>
-                <span>Front-End/Data Science Engineer Intern</span>
-                <span>So-net Media Networks Corp</span>
-                <span>Tokyo, Japan</span>
-                <span>May 2019 - August 2019</span>
+              <div className={styles.information}>
+                <div className={styles.position}>
+                  Front-End/Data Science Engineer Intern
+                </div>
+                <div className={styles.subInformation}>
+                  <div className={styles.company}>
+                    So-net Media Networks Corp
+                  </div>
+                  <span className={styles.duration}>
+                    May 2019 - August 2019
+                  </span>
+                  <span className={styles.location}>Tokyo, Japan</span>
+                </div>
               </div>
               <p>
                 Using React, Redux, Javascript, and TypeScript to develop a web
                 platform that tracks companies online advertisement performances
+                <br />
+                <br />
                 Researched machine learning models and tuned parameters to
                 explore ways to improve the algorithm responsible for ad
                 selection Created documents that explain Git, Bash, and coding
                 syntax for other interns.
               </p>
             </section>
+
             <section>
-              <div>
-                <span>Full Stack Engineer Intern</span>
-                <span>Kinetikos</span>
-                <span>Lisbon Area, Portugal</span>
-                <span>June 2018 - August 2018</span>
+              <div className={styles.information}>
+                <div className={styles.position}>
+                  Full Stack Engineer Intern
+                </div>
+                <div className={styles.subInformation}>
+                  <div className={styles.company}>Kinetikos</div>
+                  <span className={styles.duration}>
+                    June 2018 - August 2018
+                  </span>
+                  <span className={styles.location}>Lisbon Area, Portugal</span>
+                </div>
               </div>
               <p>
                 Completed an intensive course in HTML, CSS, JavaScript,
                 TypeScript, Node.js, jQuery, react.js,　GraphQL, Prisma. Built a
-                Weather app, twitter clone, and recipe sharing app Implemented a
-                health app which detects and records patients’ movements in
-                addition to providing them with health questionnaires having TTS
-                & STT functionality
+                Weather app, twitter clone, and recipe sharing app
+                <br />
+                <br />
+                Implemented a health app which detects and records patients’
+                movements in addition to providing them with health
+                questionnaires having TTS & STT functionality
               </p>
             </section>
+
             <section>
-              <div>
-                <span>Technology Help desk & Business management Intern</span>
-                <span>ITA, Inc.</span>
-                <span>Itasca, Illinois</span>
-                <span>May 2018 - June 2018</span>
+              <div className={styles.information}>
+                <div className={styles.position}>
+                  Technology Help desk & Business management Intern
+                </div>
+                <div className={styles.subInformation}>
+                  <div className={styles.company}>ITA, Inc.</div>
+                  <span className={styles.duration}>May 2018 - June 2018</span>
+                  <span className={styles.location}>Itasca, Illinois</span>
+                </div>
               </div>
               <p>
                 Set up computers, a phone system, and network systems and
-                checked security for local Japanese companies Helped 3 Japanese
-                companies expand to the U.S. by providing translations and local
-                business and legal knowledge Made an Android Application to
-                teach interns about company practice
+                checked security for local Japanese companies
+                <br />
+                <br />
+                Helped 3 Japanese companies expand to the U.S. by providing
+                translations and local business and legal knowledge Made an
+                Android Application to teach interns about company practice
               </p>
             </section>
           </div>
@@ -147,9 +174,11 @@ const Profile = ({ data }) => {
                 I have fed alloy images to YOLOv3 network, detected the defects
                 in the TEM videos, and tracked their number and size I have also
                 calculated the generation and annealing and achieved high
-                accuracy defects detection with 0.95 F1 and low latency This is
-                the first deep learning project ever achieved for TEM videos
-                that can be applied to research projects
+                accuracy defects detection with 0.95 F1 and low latency
+                <br />
+                <br />
+                This is the first deep learning project ever achieved for TEM
+                videos that can be applied to research projects
               </p>
               <a href={`https://skunkworks.engr.wisc.edu/`}>
                 Link to UW-Madison Informatics Skunkworks

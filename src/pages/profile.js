@@ -53,7 +53,10 @@ const Profile = ({ data }) => {
               Please feel free to message me on any medias above or through
               email! Thank you for visiting my website!
             </div>
-            <a href="https://drive.google.com/uc?export=download&id=1qho_ioHcWKb5sfXr9mX3A3JLmV2cImKi">
+            <a
+              href="https://drive.google.com/uc?export=download&id=1qho_ioHcWKb5sfXr9mX3A3JLmV2cImKi"
+              className={styles.resumeLink}
+            >
               Direct download like of my resume
             </a>
             <br />
@@ -73,6 +76,7 @@ const Profile = ({ data }) => {
                   <span className={styles.location}>Madison, WI</span>
                 </div>
               </div>
+              <div className={styles.skills}>React, JS</div>
               <p>
                 Building the Front-End of a tutor scheduling system for students
                 with the feature for managers to control the service
@@ -96,6 +100,9 @@ const Profile = ({ data }) => {
                     May 2019 - August 2019
                   </span>
                   <span className={styles.location}>Tokyo, Japan</span>
+                  <div className={styles.skills}>
+                    React, Redux, JS, TS, Python
+                  </div>
                 </div>
               </div>
               <p>
@@ -123,6 +130,7 @@ const Profile = ({ data }) => {
                   <span className={styles.location}>Lisbon Area, Portugal</span>
                 </div>
               </div>
+              <div className={styles.skills}>React, JS, Java</div>
               <p>
                 Completed an intensive course in HTML, CSS, JavaScript,
                 TypeScript, Node.js, jQuery, react.js,　GraphQL, Prisma. Built a
@@ -146,6 +154,7 @@ const Profile = ({ data }) => {
                   <span className={styles.location}>Itasca, Illinois</span>
                 </div>
               </div>
+              <div className={styles.skills}>Java, Marketing, Japanese</div>
               <p>
                 Set up computers, a phone system, and network systems and
                 checked security for local Japanese companies
@@ -166,6 +175,7 @@ const Profile = ({ data }) => {
                   <span className={styles.location}>Tokyo, Japan</span>
                 </div>
               </div>
+              <div className={styles.skills}>Marketing, Communication</div>
               <p>
                 Venture Cafe is a place for people to make connections, who are
                 interested in entrepreneurship and those who are participating
@@ -190,6 +200,7 @@ const Profile = ({ data }) => {
                   <span className={styles.location}>Tokyo, Japan</span>
                 </div>
               </div>
+              <div className={styles.skills}>Tutoring</div>
               <p>
                 Tutored a high school student by providing materials for high
                 school exams Mostly focused on reviewing the class materials and
@@ -217,6 +228,7 @@ const Profile = ({ data }) => {
                   <span className={styles.location}>Tokyo, Japan</span>
                 </div>
               </div>
+              <div className={styles.skills}>Tutoring</div>
               <p>
                 Venture Cafe is a place for people to make connections, who are
                 interested in entrepreneurship and those who are participating
@@ -227,6 +239,96 @@ const Profile = ({ data }) => {
                 We organize events every week, and each week has different
                 topics and sessions. I am helping setting up and cleaning up the
                 place, connecting people, and providing drinks.
+              </p>
+            </section>
+          </div>
+
+          <div className={[styles.research, styles.item].join(' ')}>
+            <h3>Main Projects</h3>
+            <hr />
+            <AniLink fade className={styles.projectLinkAll} to={`/projects/`}>
+              Please click here to see all the projects.
+            </AniLink>
+            <br />
+            <br />
+            <section>
+              <div className={styles.information}>
+                <div className={styles.position}>Study Timer Android App</div>
+                <div className={styles.subInformation}>
+                  <span className={styles.duration}>
+                    December 2018 – February 2019
+                  </span>
+                  <div className={styles.skills}>Java, SQL, XML</div>
+                </div>
+              </div>
+              <AniLink
+                fade
+                className={styles.projectLink}
+                to={`/project/study-timer`}
+              >
+                Jump to the project page
+              </AniLink>
+              <p>
+                A fun app that records the time of different types of daily
+                activities to earn virtual money
+                <br />
+                <br />
+                Shows how much virtual money is made daily with the detailed
+                activity log
+              </p>
+            </section>
+
+            <section>
+              <div className={styles.information}>
+                <div className={styles.position}>
+                  Gomoku (Five in a Row of Tic Tac Toe) board Game Android App
+                </div>
+                <div className={styles.subInformation}>
+                  <span className={styles.duration}>
+                    August 2018 – September 2018
+                  </span>
+                  <div className={styles.skills}>Java, SQL, XML</div>
+                </div>
+              </div>
+              <AniLink
+                fade
+                className={styles.projectLink}
+                to={`/project/gomoku`}
+              >
+                Jump to the project page
+              </AniLink>
+              <p>
+                A fun app that records the time of different types of daily
+                activities to earn virtual money
+                <br />
+                <br />
+                Shows how much virtual money is made daily with the detailed
+                activity log
+              </p>
+            </section>
+
+            <section>
+              <div className={styles.information}>
+                <div className={styles.position}>Othello Game App</div>
+                <div className={styles.subInformation}>
+                  <span className={styles.duration}>April 2019 – May 2019</span>
+                  <div className={styles.skills}>C++</div>
+                </div>
+              </div>
+              <AniLink
+                fade
+                className={styles.projectLink}
+                to={`/project/othello`}
+              >
+                Jump to the project page
+              </AniLink>
+              <p>
+                Implemented an strong AI that detects and analyzes the board
+                state
+                <br />
+                <br />
+                The simple and reusable interface enables the developers to add
+                different type of AI algorithms
               </p>
             </section>
           </div>
@@ -249,8 +351,9 @@ const Profile = ({ data }) => {
                   <span className={styles.location}>Madison, WI</span>
                 </div>
               </div>
+              <div className={styles.skills}>Python, MATLAB</div>
               <AniLink fade className={styles.projectLink} to={`/project/yolo`}>
-                Jump to project page
+                Jump to the project page
               </AniLink>
               <p>
                 I have fed alloy images to YOLOv3 network, detected the defects

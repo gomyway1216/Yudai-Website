@@ -24,6 +24,11 @@
     margin: 0 20px 0 20px;
     flex: 2;
 
+    .resume-link {
+      font-size: x-large;
+      font-weight: bold;
+    }
+
     //   margin: 20px 10px 20px 10px;
 
     .item {
@@ -43,9 +48,14 @@
       background: var(--mainGrey);
     }
 
-    .projectLink {
+    .projectLinkAll {
       font-weight: bold;
       font-size: x-large;
+    }
+
+    .project-link {
+      font-weight: bold;
+      font-size: large;
     }
 
     .information {
@@ -75,6 +85,10 @@
           text-align: right;
         }
       }
+    }
+
+    .skills {
+      text-align: right;
     }
   }
   // .s .spans-bottom {

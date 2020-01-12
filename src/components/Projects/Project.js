@@ -1,10 +1,10 @@
-import React from "react"
-import Image from "gatsby-image"
-import styles from "../../css/tour.module.css"
-import { FaMap } from "react-icons/fa"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react'
+import Image from 'gatsby-image'
+import styles from '../../css/tour.module.css'
+import { FaMap } from 'react-icons/fa'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import PropTypes from 'prop-types'
+import { useStaticQuery, graphql } from 'gatsby'
 
 const getImage = graphql`
   query {
@@ -28,7 +28,7 @@ const Project = ({ project }) => {
     <article className={styles.tour}>
       <div className={styles.imgContainer}>
         <Image fluid={mainImage} className={styles.img} alt="single project" />
-        <AniLink fade className={styles.link} to={`/projects/${slug}`}>
+        <AniLink fade className={styles.link} to={`/project/${slug}`}>
           details
         </AniLink>
       </div>
@@ -36,7 +36,7 @@ const Project = ({ project }) => {
         <h3>{title}</h3>
         <div className={styles.info}>
           <h4 className={styles.country}>
-            {shortDescription || "default project"}
+            {shortDescription || 'default project'}
           </h4>
           <div className={styles.details}>
             <h6>{category}</h6>
@@ -60,7 +60,7 @@ Project.propTypes = {
     slug: PropTypes.string.isRequired,
     createdAt: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
-    images: PropTypes.arrayOf(PropTypes.object).isRequired
+    images: PropTypes.arrayOf(PropTypes.object).isRequired,
   }),
 }
 

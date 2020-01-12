@@ -1,4 +1,4 @@
-const path = require("path")
+const path = require('path')
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -19,26 +19,45 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      projects: allContentfulProjects {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
     }
   `)
   data.tours.edges.forEach(({ node }) => {
     createPage({
       path: `tours/${node.slug}`,
-      component: path.resolve("./src/templates/tour-template.js"),
+      component: path.resolve('./src/templates/tour-template.js'),
       context: {
         slug: node.slug,
       },
     })
   })
+
   data.posts.edges.forEach(({ node }) => {
     createPage({
       path: `blog/${node.slug}`,
-      component: path.resolve("./src/templates/blog-template.js"),
+      component: path.resolve('./src/templates/blog-template.js'),
       context: {
         slug: node.slug,
       },
     })
   })
+
+  data.projects.edges.forEach(({ node }) => {
+    createPage({
+      path: `project/${node.slug}`,
+      component: path.resolve('./src/templates/project-template.js'),
+      context: {
+        slug: node.slug,
+      },
+    })
+  })
+
   // amount of posts
   const posts = data.posts.edges
   // posts per page
@@ -49,7 +68,7 @@ exports.createPages = async ({ graphql, actions }) => {
   Array.from({ length: numPages }).forEach((_, i) => {
     createPage({
       path: i === 0 ? `/blogs` : `/blogs/${i + 1}`,
-      component: path.resolve("./src/templates/blog-list-template.js"),
+      component: path.resolve('./src/templates/blog-list-template.js'),
       context: {
         limit: postsPerPage,
         skip: i * postsPerPage,

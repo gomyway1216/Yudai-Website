@@ -31,7 +31,8 @@ const Profile = ({ data }) => {
       {/* <SEO title="About me" /> */}
       {/* <StyledHero img={data.contactBcg.childImageSharp.fluid} /> */}
       <div>
-        this page is still under construction. Thanks for being patient.
+        this page is still under construction. So, the contents here is not the
+        final ones.
       </div>
 
       <div className={styles.profile}>
@@ -60,10 +61,16 @@ const Profile = ({ data }) => {
             <hr />
             <section>
               <div>
-                <span>Full-Stack Engineer</span>
-                <span>University of Wisconsin-Madison</span>
-                <span>Madison, WI</span>
-                <span>April 2019 - Present</span>
+                <div className={styles.spansTop}>
+                  <div className={styles.position}>Full-Stack Engineer</div>
+                  <div className={styles.company}>
+                    University of Wisconsin-Madison
+                  </div>
+                </div>
+                <div className={styles.spansBottom}>
+                  <span className={styles.location}>Madison, WI</span>
+                  <span className={styles.duration}>April 2019 - Present</span>
+                </div>
               </div>
               <p>
                 Building the Front-End of a tutor scheduling system for students

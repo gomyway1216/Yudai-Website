@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   margin: 5%;
+  font-size: large;
 
   //   background: var(--mainGrey);
 
@@ -14,9 +15,6 @@
       //   height: 400px;
       //   max-width: 400px;
       //   max-height: 400px;
-    }
-    .temp {
-      background-color: black;
     }
   }
 
@@ -42,5 +40,31 @@
     .organization {
       background: var(--mainGrey);
     }
+
+    .spans-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .spans-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+  }
+
+  .position {
+    font-weight: bold;
+    font-size: x-large;
+  }
+
+  .company {
+  }
+
+  .location {
+  }
+
+  .duration {
   }
 }

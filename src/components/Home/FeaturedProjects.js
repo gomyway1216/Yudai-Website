@@ -1,31 +1,33 @@
-import React from "react"
-import Tour from "../Tours/Tour"
-import Project from "../Projects/Project"
-import { useStaticQuery, graphql } from "gatsby"
-import Title from "../Title"
-import styles from "../../css/items.module.css"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import React from 'react'
+import Tour from '../Tours/Tour'
+import Project from '../Projects/Project'
+import { useStaticQuery, graphql } from 'gatsby'
+import Title from '../Title'
+import styles from '../../css/items.module.css'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 const getProjects = graphql`
   query {
-	featuredProjects: allContentfulProjects(filter: {featured: {eq: true}}) {
-    edges {
-      node {
-        contentful_id
-        title
-        shortDescription
-        slug
-        createdAt(formatString: "MMMM Do, YYYY ")
-        category
-        images {
-          fluid {
-            ...GatsbyContentfulFluid
+    featuredProjects: allContentfulProjects(
+      filter: { featured: { eq: true } }
+    ) {
+      edges {
+        node {
+          contentful_id
+          title
+          shortDescription
+          slug
+          completedAt
+          category
+          images {
+            fluid {
+              ...GatsbyContentfulFluid
+            }
           }
         }
       }
     }
   }
-}
 `
 
 const FeaturedProjects = () => {
@@ -37,7 +39,7 @@ const FeaturedProjects = () => {
       <Title title="featured" subtitle="projects" />
       <div className={styles.center}>
         {projects.map(({ node }) => {
-        //   return <Tour key={node.contentful_id} tour={node} />
+          //   return <Tour key={node.contentful_id} tour={node} />
           return <Project key={node.contentful_id} project={node} />
         })}
       </div>

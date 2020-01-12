@@ -1,28 +1,31 @@
-import React from "react"
+import React from 'react'
 // import TourList from "./TourList"
-import ProjectList from "./ProjectList"
-import { useStaticQuery, graphql } from "gatsby"
+import ProjectList from './ProjectList'
+import { useStaticQuery, graphql } from 'gatsby'
 
 const getProjects = graphql`
   query {
-	projects: allContentfulProjects {
-    edges {
-      node {
-        contentful_id
-        title
-        shortDescription
-        slug
-        createdAt(formatString: "MMMM Do, YYYY ")
-        category
-        images {
-          fluid {
-            ...GatsbyContentfulFluid
+    projects: allContentfulProjects(
+      sort: { fields: completedAt, order: DESC }
+    ) {
+      edges {
+        node {
+          contentful_id
+          title
+          shortDescription
+          slug
+          completedAt
+          category
+          featured
+          images {
+            fluid {
+              ...GatsbyContentfulFluid
+            }
           }
         }
       }
     }
   }
-}
 `
 
 const Projects = () => {

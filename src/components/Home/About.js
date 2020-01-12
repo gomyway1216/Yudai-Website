@@ -35,7 +35,6 @@ const About = () => {
         <article className={styles.aboutInfo}>
           <h4>I am English&Japanese bilingual studying Computer Science.</h4>
           <p>Education</p>
-          <line />
           <p>
             Computer Science Major with Math and Entrepreneurship Minor from
             University of Wisconsin-Madison

@@ -15,9 +15,13 @@ const Template = ({ data }) => {
     title,
     images,
     description: { json },
-    createdAt,
+    completedAt,
     category,
   } = data.project
+
+  let date = new Date(completedAt)
+  let formatted_date =
+    date.getMonth() + 1 + '-' + date.getDate() + '-' + date.getFullYear()
 
   const [mainImage, ...projectImages] = images
 
@@ -88,7 +92,7 @@ const Template = ({ data }) => {
               {category}
             </p>
           </div>
-          <h4>starts on : {createdAt}</h4>
+          <h4>Created at : {formatted_date}</h4>
           {/* <p className={styles.desc}>{description}</p> */}
 
           <article className={styles.post}>
@@ -122,7 +126,7 @@ export const query = graphql`
       description {
         json
       }
-      createdAt(formatString: "dddd MMMM Do, YYYY")
+      completedAt
       category
     }
   }

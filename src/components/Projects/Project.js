@@ -21,8 +21,20 @@ const getImage = graphql`
 const Project = ({ project }) => {
   const data = useStaticQuery(getImage)
   const img = data.file.childImageSharp.fluid
-  const { title, shortDescription, slug, createdAt, category, images } = project
+  const {
+    title,
+    shortDescription,
+    slug,
+    completedAt,
+    category,
+    images,
+  } = project
   let mainImage = images ? images[0].fluid : img
+
+  let date = new Date(completedAt)
+  let formatted_date =
+    date.getMonth() + 1 + '-' + date.getDate() + '-' + date.getFullYear()
+  console.log(formatted_date)
 
   return (
     <article className={styles.tour}>
@@ -40,7 +52,7 @@ const Project = ({ project }) => {
           </h4>
           <div className={styles.details}>
             <h6>{category}</h6>
-            <h6>${createdAt}</h6>
+            <h6>Created At {formatted_date}</h6>
           </div>
         </div>
       </div>
@@ -50,15 +62,10 @@ const Project = ({ project }) => {
 
 Project.propTypes = {
   project: PropTypes.shape({
-    // name: PropTypes.string.isRequired,
-    // country: PropTypes.string.isRequired,
-    // price: PropTypes.number.isRequired,
-    // days: PropTypes.number.isRequired,
-    // images: PropTypes.arrayOf(PropTypes.object).isRequired,
     title: PropTypes.string.isRequired,
     shortDescription: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,
-    createdAt: PropTypes.string.isRequired,
+    completedAt: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
     images: PropTypes.arrayOf(PropTypes.object).isRequired,
   }),

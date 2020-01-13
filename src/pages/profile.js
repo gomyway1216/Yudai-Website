@@ -46,11 +46,12 @@ const Profile = ({ data }) => {
               <h2>Introduction</h2>
 
               <div>
-                I am a English/Japanese Bilingual college student at University
-                of Wisconsin-Madison. I am aiming to be an software engineer and
-                participate in the projects that help many people.
+                I am an English/Japanese Bilingual studying Computer Science
+                with Math and Entrepreneurship at the University of
+                Wisconsin-Madison. I would love to be a Software Engineer and
+                participate in projects that help many people.
                 <br />
-                Please feel free to message me on any medias above or through
+                Please feel free to message me on any media above or through
                 email! Thank you for visiting my website!
               </div>
               <br />

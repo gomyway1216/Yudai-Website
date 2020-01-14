@@ -6,13 +6,16 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { log } from 'util'
 import SEO from '../components/SEO'
+import Img from 'gatsby-image'
 
 const Blog = ({ data }) => {
   const {
     title,
+    image,
     published,
     text: { json },
   } = data.post
+
   const options = {
     renderNode: {
       'embedded-asset-block': node => {
@@ -52,6 +55,14 @@ const Blog = ({ data }) => {
   return (
     <Layout>
       <SEO title={title} />
+      <div className={styles.topImageContainer}>
+        <Img
+          fluid={{ ...image.fluid, aspectRatio: 1 }}
+          alt="project image"
+          className={styles.topImage}
+          imgStyle={{ objectFit: 'contain' }}
+        />
+      </div>
       <section className={styles.blog}>
         <div className={styles.center}>
           <h1>{title}</h1>
@@ -59,7 +70,14 @@ const Blog = ({ data }) => {
           <article className={styles.post}>
             {documentToReactComponents(json, options)}
           </article>
-          <AniLink fade to="/blog" className="btn-primary">
+          <AniLink
+            fade
+            to="/blog"
+            // className="btn-primary"
+            // className={styles.allPost}
+            // style={{ textAlign: center }}
+            className={'btn-primary {styles.center}' + styles.allPostButton}
+          >
             all posts
           </AniLink>
         </div>
@@ -72,6 +90,11 @@ export const query = graphql`
   query getPost($slug: String!) {
     post: contentfulPost(slug: { eq: $slug }) {
       title
+      image {
+        fluid {
+          ...GatsbyContentfulFluid
+        }
+      }
       published(formatString: "MMMM Do, YYYY")
       text {
         json

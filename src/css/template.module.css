@@ -63,3 +63,19 @@
     grid-column-gap: 50px;
   }
 }
+
+.top-image-container {
+  /* height: 300px; */
+  /* max-width: 400px; */
+  width: 100%;
+  height: 50vh;
+  padding: none;
+}
+
+.top-image {
+  /* width: 100%; */
+  height: 100%;
+  box-shadow: var(--lightShadow);
+  /* object-fit: contain !; */
+  /* max-height: 50vh; */
+}

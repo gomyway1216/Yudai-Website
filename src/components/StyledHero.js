@@ -1,8 +1,8 @@
-import React from "react"
-import styled from "styled-components"
-import BackgroundImage from "gatsby-background-image"
+import React from 'react'
+import styled from 'styled-components'
+import BackgroundImage from 'gatsby-background-image'
 
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from 'gatsby'
 
 const getImage = graphql`
   query {
@@ -31,11 +31,11 @@ const StyledHero = ({ img, className, children, home }) => {
 }
 
 export default styled(StyledHero)`
-  min-height: ${props => (props.home ? "calc(100vh - 62px)" : "50vh")};
+  min-height: ${props => (props.home ? 'calc(100vh - 62px)' : '50vh')};
   background: ${props =>
     props.home
-      ? "linear-gradient(rgba(63, 208, 212, 0.7), rgba(0, 0, 0, 0.7))"
-      : "none"};
+      ? 'linear-gradient(rgba(63, 208, 212, 0.7), rgba(0, 0, 0, 0.7))'
+      : 'none'};
   background-position: center;
   background-size: cover;
   opacity: 1 !important;

@@ -9,6 +9,7 @@ import Day from '../components/SingleTour/Day'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import SEO from '../components/SEO'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import BackgroundImage from 'gatsby-background-image'
 
 const Template = ({ data }) => {
   const {
@@ -65,7 +66,15 @@ const Template = ({ data }) => {
   return (
     <Layout>
       <SEO title={title} />
-      <StyledHero img={mainImage.fluid} />
+      {/* <StyledHero img={mainImage.fluid} /> */}
+      <div className={styles.topImageContainer}>
+        <Img
+          fluid={{ ...mainImage.fluid, aspectRatio: 1 }}
+          alt="project image"
+          className={styles.topImage}
+          imgStyle={{ objectFit: 'contain' }}
+        />
+      </div>
       <section className={styles.template}>
         <div className={styles.center}>
           <div className={styles.images}>
@@ -74,8 +83,9 @@ const Template = ({ data }) => {
                 <Img
                   key={index}
                   fluid={item.fluid}
-                  alt="single tour"
+                  alt="project image"
                   className={styles.image}
+                  //   imgStyle={{objectFit: 'contain'}}
                 />
               )
             })}
@@ -127,6 +137,14 @@ export const query = graphql`
       }
       completedAt
       category
+    }
+
+    defaultBcg: file(relativePath: { eq: "defaultBcg.jpeg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
     }
   }
 `

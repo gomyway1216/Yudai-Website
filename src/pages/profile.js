@@ -46,10 +46,10 @@ const Profile = ({ data }) => {
               <h2>Introduction</h2>
 
               <div>
-                I am an English/Japanese Bilingual studying Computer Science
-                with Math and Entrepreneurship at the University of
-                Wisconsin-Madison. I would love to be a Software Engineer and
-                participate in projects that help many people.
+                My name is Yudai, and I’m an English/Japanese bilingual studying
+                Computer Science, Mathematics, and Entrepreneurship at the
+                University of Wisconsin-Madison. I would love to be a Software
+                Engineer and participate in projects that help many people.
                 <br />
                 Please feel free to message me on any media above or through
                 email! Thank you for visiting my website!
@@ -59,7 +59,7 @@ const Profile = ({ data }) => {
                 href="https://drive.google.com/uc?export=download&id=1qho_ioHcWKb5sfXr9mX3A3JLmV2cImKi"
                 className={styles.resumeLink}
               >
-                Direct download like of my resume
+                Direct download link of my resume
               </a>
               <br />
             </div>

@@ -11,8 +11,11 @@
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
   margin-bottom: 2rem;
+  height: 30vh;
 }
 .image {
+  box-shadow: var(--lightShadow);
+  height: 100%;
   box-shadow: var(--lightShadow);
 }
 .template h2 {
@@ -78,4 +81,9 @@
   box-shadow: var(--lightShadow);
   /* object-fit: contain !; */
   /* max-height: 50vh; */
+}
+
+.image-wrapper {
+  height: 100%;
+  width: 100%;
 }

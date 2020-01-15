@@ -85,6 +85,8 @@ const Template = ({ data }) => {
                   fluid={item.fluid}
                   alt="project image"
                   className={styles.image}
+                  imgStyle={{ objectFit: 'contain' }}
+                  // onClick={alert('clicled')}
                   //   imgStyle={{objectFit: 'contain'}}
                 />
               )

@@ -7,14 +7,22 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { log } from 'util'
 import SEO from '../components/SEO'
 import Img from 'gatsby-image'
+import { DiscussionEmbed } from 'disqus-react'
 
 const Blog = ({ data }) => {
   const {
     title,
     image,
+    slug,
     published,
     text: { json },
   } = data.post
+
+  // for commenting on the post using disqus
+  const disqusConfig = {
+    shortname: process.env.GATSBY_DISQUS_NAME,
+    config: { identifier: slug, title },
+  }
 
   const options = {
     renderNode: {
@@ -70,6 +78,7 @@ const Blog = ({ data }) => {
           <article className={styles.post}>
             {documentToReactComponents(json, options)}
           </article>
+          <DiscussionEmbed {...disqusConfig} />
           <AniLink
             fade
             to="/blog"
@@ -95,6 +104,7 @@ export const query = graphql`
           ...GatsbyContentfulFluid
         }
       }
+      slug
       published(formatString: "MMMM Do, YYYY")
       text {
         json

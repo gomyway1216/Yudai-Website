@@ -17,6 +17,7 @@
     "@contentful/rich-text-react-renderer": "^13.4.0",
     "babel-plugin-styled-components": "^1.10.6",
     "bootstrap": "^4.4.1",
+    "disqus-react": "^1.0.7",
     "dotenv": "^8.2.0",
     "gatsby": "^2.18.12",
     "gatsby-background-image": "^0.9.12",

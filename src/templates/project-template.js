@@ -98,10 +98,10 @@ const Template = ({ data }) => {
               <FaMoneyBillWave className={styles.icon} />
               starting from ${price}
             </p> */}
-            <p>
+            <h4>
               {/* <FaMap className={styles.icon} /> */}
-              {category}
-            </p>
+              Category: {category}
+            </h4>
           </div>
           <h4>Created at : {formatted_date}</h4>
           {/* <p className={styles.desc}>{description}</p> */}

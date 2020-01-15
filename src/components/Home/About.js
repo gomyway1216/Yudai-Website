@@ -33,19 +33,42 @@ const About = () => {
           </div>
         </article>
         <article className={styles.aboutInfo}>
-          <h4>I am English&Japanese bilingual studying Computer Science.</h4>
-          <p>Education</p>
-          <p>
-            Computer Science Major with Math and Entrepreneurship Minor from
-            University of Wisconsin-Madison
-          </p>
-          <p>Work Experience</p>
-          <p>Front-End Engineer/Data Science Intern at SMN | Tokyo, Japan</p>
-          <p>
-            Full-Stack Engineer at UW-Madison College of Engineering | Madison,
-            WI
-          </p>
-          <p>Full Stack Engineer Intern at Kinetikos | Lisbon, Portugal</p>
+          <h4>
+            I am an English&Japanese bilingual studying Computer Science to be a
+            Software Engineer.
+          </h4>
+          <div className={styles.educationWrapper}>
+            <h3>Education</h3>
+            <div className={styles.education}>
+              <div>
+                Computer Science Major with Math and Entrepreneurship Minor from
+                University of Wisconsin-Madison
+              </div>
+              <div>Graduating on May 2020</div>
+            </div>
+          </div>
+
+          <div className={styles.workWrapper}>
+            <h3>Work Experience</h3>
+            <div className={styles.work}>
+              <div>
+                <span className={styles.boldText}>
+                  Front-End Engineer/Data Science Intern
+                </span>
+                at SMN | Tokyo, Japan
+              </div>
+              <div>
+                <span className={styles.boldText}>Full-Stack Engineer</span> at
+                UW-Madison College of Engineering | Madison, WI
+              </div>
+              <div>
+                <span className={styles.boldText}>
+                  Full Stack Engineer Intern
+                </span>
+                at Kinetikos | Lisbon, Portugal
+              </div>
+            </div>
+          </div>
 
           <AniLink fade to="/profile" className="btn-primary">
             more details

@@ -8,7 +8,6 @@ import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import Title from '../components/Title'
 import styles from '../css/profile.module.scss'
-// import styles from '../../css/about.module.css'
 
 const getProfileImage = graphql`
   query profileImage {

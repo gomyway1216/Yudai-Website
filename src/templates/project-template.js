@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import StyledHero from '../components/StyledHero'
@@ -10,6 +10,10 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import SEO from '../components/SEO'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import BackgroundImage from 'gatsby-background-image'
+import ImageModal from '../components/Modal/ImageModal'
+import ImageModal2 from '../components/Modal/ImageModal2'
+import ImageModal3 from '../components/Modal/ImageModal3'
+import ImageModal4 from '../components/Modal/ImageModal4'
 
 const Template = ({ data }) => {
   const {
@@ -25,6 +29,9 @@ const Template = ({ data }) => {
     date.getMonth() + 1 + '-' + date.getDate() + '-' + date.getFullYear()
 
   const [mainImage, ...projectImages] = images
+
+  const [modalOpen, setModalOpen] = useState(false)
+  const [modalFluidImage, setModalFluidImage] = useState()
 
   const options = {
     renderNode: {
@@ -65,9 +72,17 @@ const Template = ({ data }) => {
 
   return (
     <Layout>
+      {/* <ImageModal show={true} /> */}
       <SEO title={title} />
       {/* <StyledHero img={mainImage.fluid} /> */}
-      <div className={styles.topImageContainer}>
+      <div
+        className={styles.topImageContainer}
+        style={{ cursor: 'pointer' }}
+        onClick={() => {
+          setModalOpen(true)
+          setModalFluidImage(mainImage.fluid)
+        }}
+      >
         <Img
           fluid={{ ...mainImage.fluid, aspectRatio: 1 }}
           alt="project image"
@@ -80,15 +95,25 @@ const Template = ({ data }) => {
           <div className={styles.images}>
             {projectImages.map((item, index) => {
               return (
-                <Img
+                <div
                   key={index}
-                  fluid={item.fluid}
-                  alt="project image"
-                  className={styles.image}
-                  imgStyle={{ objectFit: 'contain' }}
-                  // onClick={alert('clicled')}
-                  //   imgStyle={{objectFit: 'contain'}}
-                />
+                  style={{ cursor: 'pointer' }}
+                  onClick={() => {
+                    setModalOpen(true)
+                    setModalFluidImage(item.fluid)
+                  }}
+                  className={styles.imageWrapper}
+                >
+                  <Img
+                    key={index}
+                    fluid={item.fluid}
+                    alt="project image"
+                    className={styles.image}
+                    imgStyle={{ objectFit: 'contain' }}
+                    // onClick={alert('clicled')}
+                    //   imgStyle={{objectFit: 'contain'}}
+                  />
+                </div>
               )
             })}
           </div>
@@ -121,6 +146,25 @@ const Template = ({ data }) => {
           </AniLink>
         </div>
       </section>
+      <ImageModal
+        open={modalOpen}
+        handleOpen={() => setModalOpen(true)}
+        handleClose={() => setModalOpen(false)}
+        fluid={modalFluidImage}
+      />
+      {/* <ImageModal2
+        open={modalOpen}
+        handleOpen={() => setModalOpen(true)}
+        handleClose={() => setModalOpen(false)}
+        fluid={modalFluidImage}
+      /> */}
+      {/* <ImageModal3 fluid={modalFluidImage} open={modalOpen} /> */}
+      {/* <ImageModal4
+        open={modalOpen}
+        handleOpen={() => setModalOpen(true)}
+        handleClose={() => setModalOpen(false)}
+        fluid={modalFluidImage}
+      /> */}
     </Layout>
   )
 }

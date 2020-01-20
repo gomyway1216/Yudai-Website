@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
-import { graphql, navigate, PageRenderer } from 'gatsby'
 import Img from 'gatsby-image'
 
 import { makeStyles } from '@material-ui/core/styles'
@@ -9,8 +7,6 @@ import Backdrop from '@material-ui/core/Backdrop'
 import Fade from '@material-ui/core/Fade'
 
 import styles from '../../css/image-modal.module.css'
-
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 const useStyles = makeStyles(theme => ({
   modal: {
@@ -37,10 +33,6 @@ const ImageModal = props => {
 
   return (
     <div>
-      {/* <button type="button" onClick={handleOpen}>
-        react-transition-group
-      </button> */}
-
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"

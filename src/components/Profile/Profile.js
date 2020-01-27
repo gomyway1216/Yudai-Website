@@ -32,8 +32,9 @@ const Profile = props => {
             <div>
               My name is Yudai, and I’m an English/Japanese bilingual studying
               Computer Science, Mathematics, and Entrepreneurship at the
-              University of Wisconsin-Madison. I would love to be a Software
-              Engineer and participate in projects that help many people.
+              University of Wisconsin-Madison. I am currently looking for a new
+              grad Software Engineering position. I love using React, Node.js,
+              JavaScript, and GraphQL to create full-stack applications!
               <br />
               Please feel free to message me on any media above or through
               email! Thank you for visiting my website!

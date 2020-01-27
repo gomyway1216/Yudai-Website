@@ -40,6 +40,9 @@ const Navbar = () => {
             )
           })}
         </ul>
+        <a href="https://drive.google.com/file/d/1qho_ioHcWKb5sfXr9mX3A3JLmV2cImKi/view?usp=sharing">
+          Resume
+        </a>
         <div className={styles.navSocialLinks}>
           {socialIcons.map((item, index) => {
             return (

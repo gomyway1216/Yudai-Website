@@ -32,17 +32,44 @@ const Profile = props => {
             <div>
               My name is Yudai, and I’m an English/Japanese bilingual studying
               Computer Science, Mathematics, and Entrepreneurship at the
-              University of Wisconsin-Madison. I am currently looking for a new
-              grad Software Engineering position. I love using React, Node.js,
-              JavaScript, and GraphQL to create full-stack applications!
+              University of Wisconsin-Madison.
               <br />
               <br />
-              This blog is one of my project. I used React, Gatsby.js,
-              JavaScript, GraphQL, and Contentful.
+              I had very little conversation skills in English when I initially
+              came to the U.S, but have improved significantly since then. Much
+              of my improvement comes from the involvement I've had with other
+              organizations both on my college campus, and in Japan.
               <br />
               <br />
-              Please feel free to message me on any media above or through
-              email! Thank you for visiting my website!
+              On my college campus I lead a tech team for a renewable energy
+              organization, and worked on ways to improve widespread knowledge
+              of solar energy, as well as onboard and manage new members.
+              <br />
+              <br />
+              In Tokyo I volunteer with a venture group to write software to
+              analyze and improve their social events. My experience in the U.S.
+              has also allowed me to propose new ideas and perspectives to the
+              Japanese business world.
+              <br />
+              <br />
+              While I am unsure of my exact future endeavors, I do know that I
+              want to continue to help other students before I graduate, and
+              extend this to wherever I go from there.
+              <br />
+              <br />
+              This blog is meant to be a collection of the thoughts and
+              experiences I pick up along the way. I am passionate about
+              full-stack engineering. I used React, Node.js, JavaScript, GraphQL
+              for my personal projects (this blog included), as well as for my
+              university job.
+              <br />
+              <br />
+              I am currently looking for a new grad Software Engineering
+              position.
+              <br />
+              <br />I hope you would be reaching out to me. Links in the top
+              right corner redirect to my social media.Thank you for visiting my
+              website!
             </div>
             <br />
             <a
@@ -212,7 +239,9 @@ const Profile = props => {
                 <div className={styles.position}>Ambassador</div>
                 <div className={styles.subInformation}>
                   <div className={styles.company}>Venture Café Tokyo</div>
-                  <span className={styles.duration}>June 2019 - Present</span>
+                  <span className={styles.duration}>
+                    June 2019 - <span className={styles.boldText}>Present</span>
+                  </span>
                   <span className={styles.location}>Tokyo, Japan</span>
                 </div>
               </div>
@@ -467,7 +496,9 @@ const Profile = props => {
                   <div className={styles.company}>
                     Kappa Eta Kappa Delta Chapter
                   </div>
-                  <span className={styles.duration}>Jan 2018 - Present</span>
+                  <span className={styles.duration}>
+                    Jan 2018 - <span className={styles.boldText}>Present</span>
+                  </span>
                   <span className={styles.location}>Madison, WI</span>
                 </div>
               </div>

@@ -36,6 +36,11 @@ const Profile = props => {
               grad Software Engineering position. I love using React, Node.js,
               JavaScript, and GraphQL to create full-stack applications!
               <br />
+              <br />
+              This blog is one of my project. I used React, Gatsby.js,
+              JavaScript, GraphQL, and Contentful.
+              <br />
+              <br />
               Please feel free to message me on any media above or through
               email! Thank you for visiting my website!
             </div>
@@ -103,7 +108,10 @@ const Profile = props => {
                   <div className={styles.company}>
                     University of Wisconsin-Madison
                   </div>
-                  <span className={styles.duration}>April 2019 - Present</span>
+                  <span className={styles.duration}>
+                    April 2019 -{' '}
+                    <span className={styles.boldText}>Present</span>
+                  </span>
                   <span className={styles.location}>Madison, WI</span>
                 </div>
               </div>
@@ -208,7 +216,9 @@ const Profile = props => {
                   <span className={styles.location}>Tokyo, Japan</span>
                 </div>
               </div>
-              <div className={styles.skills}>Marketing, Communication</div>
+              <div className={styles.skills}>
+                React, Node.js, Javascript, GraphQL, MongoDB, Marketing
+              </div>
               <p>
                 Venture Cafe's mission is to connect innovators and creates the
                 environment to help produce and accelerate future businesses. We

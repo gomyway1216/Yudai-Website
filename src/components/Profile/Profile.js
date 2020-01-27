@@ -41,12 +41,12 @@ const Profile = props => {
               organizations both on my college campus, and in Japan.
               <br />
               <br />
-              On my college campus I lead a tech team for a renewable energy
-              organization, and worked on ways to improve widespread knowledge
-              of solar energy, as well as onboard and manage new members.
+              On my college campus, I lead a tech team for a renewable energy
+              organization and worked on ways to improve widespread knowledge of
+              solar energy, as well as onboard and manage new members.
               <br />
               <br />
-              In Tokyo I volunteer with a venture group to write software to
+              In Tokyo, I volunteer with a venture group to write software to
               analyze and improve their social events. My experience in the U.S.
               has also allowed me to propose new ideas and perspectives to the
               Japanese business world.

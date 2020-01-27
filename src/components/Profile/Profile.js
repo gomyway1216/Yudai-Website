@@ -65,11 +65,12 @@ const Profile = props => {
               <br />
               <br />
               I am currently looking for a new grad Software Engineering
-              position.
+              position in the United States. I am graduating in May 2020, I can
+              start working right after that.
               <br />
               <br />I hope you would be reaching out to me. Links in the top
-              right corner redirect to my social media.Thank you for visiting my
-              website!
+              right corner redirect to my social media. Thank you for visiting
+              my website!
             </div>
             <br />
             <a

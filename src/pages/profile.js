@@ -32,7 +32,12 @@ const ProfilePage = ({ data }) => {
   return (
     <Layout>
       <FormControl
-        style={{ width: 120, alignSelf: 'flex-end', marginRight: 50 }}
+        style={{
+          width: 120,
+          alignSelf: 'flex-end',
+          marginRight: 50,
+          marginTop: 80,
+        }}
       >
         <InputLabel>Language</InputLabel>
         <Select value={language} onChange={handleChange}>

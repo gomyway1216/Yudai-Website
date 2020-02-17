@@ -23,7 +23,9 @@ const Profile = props => {
         <div className={styles.right}>
           <div className={[styles.introduction, styles.item].join(' ')}>
             <h2>紹介</h2>
-
+            <h3>
+              こちらはまだ編集中なので、英語のわかる方は、英語版を参考にして頂ければと思います。
+            </h3>
             <div>
               こんにちは。矢口雄大と申します。ウィスコンシン大学マディソン校でコンピューターサイエンスを専攻しながら数学と起業学をマイナーで勉強しています。
               <br />

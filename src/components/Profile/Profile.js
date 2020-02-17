@@ -73,12 +73,6 @@ const Profile = props => {
               my website!
             </div>
             <br />
-            <a
-              href="https://drive.google.com/uc?export=download&id=1qho_ioHcWKb5sfXr9mX3A3JLmV2cImKi"
-              className={styles.resumeLink}
-            >
-              Direct download link of my resume
-            </a>
             <br />
           </div>
 
@@ -118,23 +112,84 @@ const Profile = props => {
             <div>
               Advanced : <span className={styles.boldText}>Java</span>,{' '}
               <span className={styles.boldText}>React</span>,{' '}
-              <span className={styles.boldText}>JavaScript</span>, TypeScript,
-              Android, Python, C
+              <span className={styles.boldText}>JavaScript</span>,
+              <span className={styles.boldText}>GraphQL</span>,
+              <span className={styles.boldText}>Java</span>, Node.js,
+              express.js, Android, Python, HTML
               <br />
-              Intermediate : GIT, C++, HTML, CSS, XML, SQL, Node.js, R, GraphQL,
-              Amazon AWS, Bash
+              Intermediate : TypeScript, MongoDB, CSS, C, C++, Git, XML, SQL, R,
+              Bash
+              <br />
+              English & Japanese{' '}
+              <span className={styles.boldText}>bilingual</span>
             </div>
           </div>
 
           <div className={[styles.work, styles.item].join(' ')}>
             <h3>Work Experience</h3>
             <hr />
+
             <section>
               <div className={styles.information}>
                 <div className={styles.position}>Full-Stack Engineer</div>
                 <div className={styles.subInformation}>
+                  <div className={styles.company}>Venture Café Tokyo</div>
+                  <span className={styles.duration}>
+                    December 2019 -{' '}
+                    <span className={styles.boldText}>Present</span>
+                  </span>
+                  <span className={styles.location}>Tokyo, Japan</span>
+                </div>
+              </div>
+              <p>
+                Developing beverage ordering system with basic CRUD functions
+                and QR code check-in
+                <br />
+                <br />
+                Creating web client using React, developing backend service with
+                GraphQL and Nodejs
+                <br />
+                <br />
+                For more information, please visit{' '}
+                <AniLink
+                  fade
+                  className={styles.projectLink}
+                  to={`/project/venture-cafe-tokyo-drink-system`}
+                >
+                  here
+                </AniLink>
+              </p>
+            </section>
+
+            <section>
+              <div className={styles.information}>
+                <div className={styles.position}>Front-End Engineer Intern</div>
+                <div className={styles.subInformation}>
                   <div className={styles.company}>
-                    University of Wisconsin-Madison
+                    So-net Media Networks (Sony)
+                  </div>
+                  <span className={styles.duration}>
+                    May 2019 - August 2019
+                  </span>
+                  <span className={styles.location}>Tokyo, Japan</span>
+                </div>
+              </div>
+              <p>
+                Developed a web client which displays companies’ online
+                advertisement performances using React, Redux, TypeScript
+                <br />
+                <br />
+                Introduced to Python and Data Science via research to improve
+                accuracy of company’s Ad selection machine learning model
+              </p>
+            </section>
+
+            <section>
+              <div className={styles.information}>
+                <div className={styles.position}>Front-End Engineer</div>
+                <div className={styles.subInformation}>
+                  <div className={styles.company}>
+                    UW-Madison College of Engineering
                   </div>
                   <span className={styles.duration}>
                     April 2019 -{' '}
@@ -143,54 +198,16 @@ const Profile = props => {
                   <span className={styles.location}>Madison, WI</span>
                 </div>
               </div>
-              <div className={styles.skills}>React, JS</div>
               <p>
-                Building the Front-End of a tutor scheduling system for students
-                with the feature for managers to control the service
-                <br />
-                <br />
-                Rebuilding the middleware and backend API that handles the
-                requests from the front-end server
+                Building thick UI client for tutor scheduling system which
+                enables students to book sessions, and administrators to perform
+                auditing using React and JavaScript
               </p>
             </section>
 
             <section>
               <div className={styles.information}>
-                <div className={styles.position}>
-                  Front-End/Data Science Engineer Intern
-                </div>
-                <div className={styles.subInformation}>
-                  <div className={styles.company}>
-                    So-net Media Networks Corp
-                  </div>
-                  <span className={styles.duration}>
-                    May 2019 - August 2019
-                  </span>
-                  <span className={styles.location}>Tokyo, Japan</span>
-                  <div className={styles.skills}>
-                    React, Redux, JS, TS, Python
-                  </div>
-                </div>
-              </div>
-              <p>
-                Developed a web platform that tracks companies online
-                advertisement performances using SMN’s DSP ad system
-                <br />
-                <br />
-                Researched machine learning models and tuned parameters to
-                explore ways to improve the algorithm responsible for ad
-                selection
-                <br />
-                Created documents that explain Git, Bash, and coding syntax for
-                other interns.
-              </p>
-            </section>
-
-            <section>
-              <div className={styles.information}>
-                <div className={styles.position}>
-                  Full Stack Engineer Intern
-                </div>
+                <div className={styles.position}>Android Engineer Intern</div>
                 <div className={styles.subInformation}>
                   <div className={styles.company}>Kinetikos</div>
                   <span className={styles.duration}>
@@ -199,16 +216,10 @@ const Profile = props => {
                   <span className={styles.location}>Lisbon Area, Portugal</span>
                 </div>
               </div>
-              <div className={styles.skills}>React, JS, Java</div>
               <p>
-                Completed an intensive course in HTML, CSS, JavaScript,
-                TypeScript, Node.js, jQuery, react.js,　GraphQL. Built a Weather
-                app, twitter clone, and recipe sharing app
-                <br />
-                <br />
-                Implemented a health app which detects and records patients’
-                movements in addition to providing them with health
-                questionnaires having TTS & STT functionality
+                Implemented a patient care Android app with features such as
+                patient monitoring and patient engagement enhanced by text to
+                speech using Java, SQL
               </p>
             </section>
 
@@ -223,7 +234,6 @@ const Profile = props => {
                   <span className={styles.location}>Itasca, Illinois</span>
                 </div>
               </div>
-              <div className={styles.skills}>Java, Marketing, Japanese</div>
               <p>
                 Set up computers, a phone system, and network systems and
                 checked security for local Japanese companies
@@ -232,36 +242,6 @@ const Profile = props => {
                 Helped 3 Japanese companies expand to the U.S. by providing
                 translations and local business and legal knowledge Made an
                 Android Application to teach interns about company practice
-              </p>
-            </section>
-
-            <section>
-              <div className={styles.information}>
-                <div className={styles.position}>Ambassador</div>
-                <div className={styles.subInformation}>
-                  <div className={styles.company}>Venture Café Tokyo</div>
-                  <span className={styles.duration}>
-                    June 2019 - <span className={styles.boldText}>Present</span>
-                  </span>
-                  <span className={styles.location}>Tokyo, Japan</span>
-                </div>
-              </div>
-              <div className={styles.skills}>
-                React, Node.js, Javascript, GraphQL, MongoDB, Marketing
-              </div>
-              <p>
-                Venture Cafe's mission is to connect innovators and creates the
-                environment to help produce and accelerate future businesses. We
-                hold a variety of studying sessions and social space every week.
-                To maximize the operation, I am currently developing software
-                that collects the name of participants and counts their beverage
-                they drink at the bar inside the event. There are more
-                functionalities added in the future.
-                <br />
-                For more information, please visit{' '}
-                <a href={`https://venturecafetokyo.org/en/`}>
-                  Venture Cafe Tokyo
-                </a>
               </p>
             </section>
 
@@ -276,7 +256,6 @@ const Profile = props => {
                   <span className={styles.location}>Tokyo, Japan</span>
                 </div>
               </div>
-              <div className={styles.skills}>Tutoring</div>
               <p>
                 Tutored a high school student by providing materials for high
                 school exams Mostly focused on reviewing the class materials and
@@ -304,7 +283,6 @@ const Profile = props => {
                   <span className={styles.location}>Tokyo, Japan</span>
                 </div>
               </div>
-              <div className={styles.skills}>Tutoring</div>
               <p>
                 Prepared small groups of students for exams and tailored
                 instructions to the students’ learning styles
@@ -327,33 +305,15 @@ const Profile = props => {
             <section>
               <div className={styles.information}>
                 <div className={styles.position}>This Portfolio/Blog</div>
-                <div className={styles.subInformation}>
-                  <span className={styles.duration}>
-                    December 2019 - Current
-                  </span>
-                  <div className={styles.skills}>
-                    React, GraphQL, Gatsby.js, Contentful
-                  </div>
-                </div>
               </div>
               <p>
-                A full-stack speedy website using Gatsby.js (this website is the
-                one!)
-                <br />
-                <br />
-                Data is saved in Contentful Headless CMS server and queried by
-                frontend server with GraphQL
+                Created fullstack portfolio and blog to share my experiences
+                using React, GraphQL, GatsbyJS (this website is the one!)
               </p>
             </section>
             <section>
               <div className={styles.information}>
                 <div className={styles.position}>Study Timer Android App</div>
-                <div className={styles.subInformation}>
-                  <span className={styles.duration}>
-                    December 2018 – February 2019
-                  </span>
-                  <div className={styles.skills}>Java, SQL, XML</div>
-                </div>
               </div>
               <AniLink
                 fade
@@ -363,12 +323,8 @@ const Profile = props => {
                 Jump to the project page
               </AniLink>
               <p>
-                Implemented an AI function to optimally win every game. 95%
-                winning rate to players of various levels
-                <br />
-                <br />
-                Board size, battle modes, and difficulty level are changeable,
-                with undo function
+                Built virtual reward-based Android app for doing various daily
+                activities using Java, SQL
               </p>
             </section>
 
@@ -376,12 +332,6 @@ const Profile = props => {
               <div className={styles.information}>
                 <div className={styles.position}>
                   Gomoku (Five in a Row of Tic Tac Toe) board Game Android App
-                </div>
-                <div className={styles.subInformation}>
-                  <span className={styles.duration}>
-                    August 2018 – September 2018
-                  </span>
-                  <div className={styles.skills}>Java, SQL, XML</div>
                 </div>
               </div>
               <AniLink
@@ -392,22 +342,14 @@ const Profile = props => {
                 Jump to the project page
               </AniLink>
               <p>
-                A fun app that records the time of different types of daily
-                activities to earn virtual money
-                <br />
-                <br />
-                Shows how much virtual money is made daily with the detailed
-                activity log
+                Released Gomoku for Android on Play Store with a custom AI with
+                95% winning rate using Java
               </p>
             </section>
 
             <section>
               <div className={styles.information}>
                 <div className={styles.position}>Othello Game App</div>
-                <div className={styles.subInformation}>
-                  <span className={styles.duration}>April 2019 – May 2019</span>
-                  <div className={styles.skills}>C++</div>
-                </div>
               </div>
               <AniLink
                 fade
@@ -417,12 +359,8 @@ const Profile = props => {
                 Jump to the project page
               </AniLink>
               <p>
-                Implemented an strong AI that detects and analyzes the board
-                state
-                <br />
-                <br />
-                The simple and reusable interface enables the developers to add
-                different type of AI algorithms
+                Implemented Othello board game for command line with turnable AI
+                using C++
               </p>
             </section>
           </div>
@@ -441,23 +379,16 @@ const Profile = props => {
                   <div className={styles.company}>
                     UW-Madison Department of Materials Science and Engineering
                   </div>
-                  <span className={styles.duration}>Jan 2019 - May 2019</span>
                   <span className={styles.location}>Madison, WI</span>
                 </div>
               </div>
-              <div className={styles.skills}>Python, MATLAB</div>
               <AniLink fade className={styles.projectLink} to={`/project/yolo`}>
                 Jump to the project page
               </AniLink>
               <p>
-                I have fed alloy images to YOLOv3 network, detected the defects
-                in the TEM videos, and tracked their number and size I have also
-                calculated the generation and annealing and achieved high
-                accuracy defects detection with 0.95 F1 and low latency
-                <br />
-                <br />
-                This is the first deep learning project ever achieved for TEM
-                videos that can be applied to research projects
+                Performed data science using Python and MATLAB in deep learning
+                research project regarding alloy defect detection, and achieved
+                0.95 F1 scores using YOLOv3
               </p>
               <a href={`https://skunkworks.engr.wisc.edu/`}>
                 Link to UW-Madison Informatics Skunkworks

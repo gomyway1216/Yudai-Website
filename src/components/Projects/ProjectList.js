@@ -3,6 +3,8 @@ import styles from '../../css/items.module.css'
 // import Tour from "./Tour"
 import Project from './Project'
 import Title from '../Title'
+// import TicTacToe from '../TicTacToe/Game'
+import CustomProject from './CustomProject'
 
 export default class ProjectList extends Component {
   state = {
@@ -38,6 +40,7 @@ export default class ProjectList extends Component {
           {this.state.projects.map(({ node }) => {
             return <Project key={node.contentful_id} project={node} />
           })}
+          <CustomProject />
         </div>
       </section>
     )

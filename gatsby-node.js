@@ -58,6 +58,14 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
+  createPage({
+    path: `project/tic-tac-toe-react`,
+    component: path.resolve('./src/templates/custom-project-template.js'),
+    context: {
+      slug: 'custom-project-template.js',
+    },
+  })
+
   // amount of posts
   const posts = data.posts.edges
   // posts per page

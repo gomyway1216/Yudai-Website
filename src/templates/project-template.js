@@ -11,9 +11,6 @@ import SEO from '../components/SEO'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import BackgroundImage from 'gatsby-background-image'
 import ImageModal from '../components/Modal/ImageModal'
-// import ImageModal2 from '../components/Modal/ImageModal2'
-// import ImageModal3 from '../components/Modal/ImageModal3'
-// import ImageModal4 from '../components/Modal/ImageModal4'
 
 const Template = ({ data }) => {
   const {

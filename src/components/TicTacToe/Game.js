@@ -4,39 +4,76 @@ import { calculateWinner } from './calculator'
 import { minimax } from './ai'
 import styles from './game.module.css'
 
+const Symbol = {
+  X: 'X',
+  O: 'O',
+}
+
+const gameProps = {
+  humanSymbol: Symbol.O,
+  aiSymbol: Symbol.X,
+}
+
+// humanTurn
+// aiTurn
+
+// humanSymbol
+// aiSymbol
+
 const Game = props => {
-  const humanTurn = 'X'
-  const aiTurn = 'O'
+  // const humanTurn = 'X'
+  // const aiTurn = 'O'
   const squares = [0, 1, 2, 3, 4, 5, 6, 7, 8]
   const initialHistory = [{ squares: squares }]
   const [history, setHistory] = useState(initialHistory)
   // toggle between X and O
-  const [xIsNext, setXIsNext] = useState(true)
+  const { humanSymbol, aiSymbol } = props
+  const [isHumanTurn, setIsHumanTurn] = useState(humanSymbol === Symbol.X)
+
   // set the number of steps
   const [stepNumber, setStepNumber] = useState(0)
   const [isLookingHistory, setIsLookingHistory] = useState(false)
 
   useEffect(() => {
-    function callAI() {
+    const callAI = () => {
       const slicedHistory = history.slice(0, stepNumber + 1)
       const finalStepInSlicedHistory = slicedHistory[slicedHistory.length - 1]
       const newSquares = [...finalStepInSlicedHistory.squares]
+      const result = minimax(newSquares, aiSymbol, humanSymbol)
 
-      const turn = xIsNext ? 'X' : 'O'
-      const result = minimax(newSquares, turn, 'X')
-
-      newSquares[result.index] = xIsNext ? 'X' : 'O'
+      newSquares[result.index] = aiSymbol
       const newStep = { squares: newSquares }
       const newHistory = [...slicedHistory, newStep]
-
       setHistory(newHistory)
-      setXIsNext(!xIsNext)
+      setIsHumanTurn(true)
       setStepNumber(slicedHistory.length)
     }
-    if (!xIsNext && !isLookingHistory) {
+    if (!isHumanTurn && !isLookingHistory) {
       callAI()
     }
-  }, [xIsNext])
+  }, [isHumanTurn])
+
+  // useEffect(() => {
+  //   function callAI() {
+  //     const slicedHistory = history.slice(0, stepNumber + 1)
+  //     const finalStepInSlicedHistory = slicedHistory[slicedHistory.length - 1]
+  //     const newSquares = [...finalStepInSlicedHistory.squares]
+
+  //     const turn = xIsNext ? 'X' : 'O'
+  //     const result = minimax(newSquares, turn, 'X')
+
+  //     newSquares[result.index] = xIsNext ? 'X' : 'O'
+  //     const newStep = { squares: newSquares }
+  //     const newHistory = [...slicedHistory, newStep]
+
+  //     setHistory(newHistory)
+  //     setXIsNext(!xIsNext)
+  //     setStepNumber(slicedHistory.length)
+  //   }
+  //   if (!xIsNext && !isLookingHistory) {
+  //     callAI()
+  //   }
+  // }, [xIsNext])
 
   const handleClick = i => {
     const slicedHistory = history.slice(0, stepNumber + 1)
@@ -50,14 +87,35 @@ const Game = props => {
     }
     if (winnerDeclared || squareAlreadyFilled) return
 
-    newSquares[i] = xIsNext ? 'X' : 'O'
+    newSquares[i] = humanSymbol
     const newStep = { squares: newSquares }
     const newHistory = [...slicedHistory, newStep]
     setHistory(newHistory)
-    setXIsNext(!xIsNext)
+    setIsHumanTurn(false)
     setStepNumber(slicedHistory.length)
     setIsLookingHistory(false)
   }
+
+  // const handleClick = i => {
+  //   const slicedHistory = history.slice(0, stepNumber + 1)
+  //   const finalStepInSlicedHistory = slicedHistory[slicedHistory.length - 1]
+  //   const newSquares = [...finalStepInSlicedHistory.squares]
+
+  //   const winnerDeclared = Boolean(calculateWinner(newSquares))
+  //   let squareAlreadyFilled = false
+  //   if (newSquares[i] === 'O' || newSquares[i] === 'X') {
+  //     squareAlreadyFilled = true
+  //   }
+  //   if (winnerDeclared || squareAlreadyFilled) return
+
+  //   newSquares[i] = xIsNext ? 'X' : 'O'
+  //   const newStep = { squares: newSquares }
+  //   const newHistory = [...slicedHistory, newStep]
+  //   setHistory(newHistory)
+  //   setXIsNext(!xIsNext)
+  //   setStepNumber(slicedHistory.length)
+  //   setIsLookingHistory(false)
+  // }
 
   const moves = history.map((step, move) => {
     const description = Boolean(move)
@@ -73,18 +131,31 @@ const Game = props => {
   const jumpTo = step => {
     setIsLookingHistory(true)
     setStepNumber(step)
+
+    const isHumanSymbolX = humanSymbol === Symbol.X
     const isEvenStepNumber = step % 2 === 0
-    setXIsNext(isEvenStepNumber)
+    if (isHumanSymbolX) {
+      setIsHumanTurn(isEvenStepNumber)
+    } else {
+      setIsHumanTurn(!isEvenStepNumber)
+    }
   }
+
+  // const jumpTo = step => {
+  //   setIsLookingHistory(true)
+  //   setStepNumber(step)
+  //   const isEvenStepNumber = step % 2 === 0
+  //   setXIsNext(isEvenStepNumber)
+  // }
 
   const currentStep = history[stepNumber]
   const winner = calculateWinner(currentStep.squares)
 
   const status = winner
     ? `Winner: ${winner}`
-    : `Next player: ${xIsNext ? 'X' : 'O'}`
+    : `Next player: ${isHumanTurn ? humanSymbol : aiSymbol}`
 
-  const disableClick = isLookingHistory && !xIsNext
+  const disableClick = isLookingHistory && !isHumanTurn
   return (
     <div className={styles.game}>
       <div className={styles.gameBoard}>

@@ -1,11 +1,15 @@
 import { calculateWinner } from './calculator'
 
+/**
+ * @param {('X' | 'O')[]} newBoard
+ * @param {'X' | 'O'} player
+ * @param {'X' | 'O'} humanPlayer
+ *
+ * @returns
+ */
 export const minimax = (newBoard, player, humanPlayer) => {
-  //   console.log('minimax current player: ', player)
-  //   console.log('minimax current player: ', humanPlayer)
   const availableSpots = emptySpots(newBoard)
   const currentWinningState = calculateWinner(newBoard)
-  //   console.log('currentWinningState', currentWinningState)
   // the game hasn't ended yet
   if (currentWinningState) {
     if (currentWinningState === humanPlayer) {
@@ -19,24 +23,17 @@ export const minimax = (newBoard, player, humanPlayer) => {
   }
 
   let moves = []
-  //   console.log('availableSpots.length', availableSpots.length)
   for (let i = 0; i < availableSpots.length; i++) {
     let move = {}
     const nextIndex = availableSpots[i]
     move.index = newBoard[nextIndex]
-    // console.log('nextIndex', nextIndex)
     newBoard[nextIndex] = player
-    // console.log('newBoard', newBoard)
     const nextPlayer = player === 'X' ? 'O' : 'X'
     let result = minimax(newBoard, nextPlayer, humanPlayer)
-    // console.log('this line might not be called')
     move.score = result.score
     newBoard[nextIndex] = move.index
     moves.push(move)
-    // console.log('move', move)
   }
-
-  //   console.log('moves'.moves)
 
   // pick the best move
   let bestMove
@@ -64,11 +61,7 @@ export const minimax = (newBoard, player, humanPlayer) => {
 }
 
 const emptySpots = board => {
-  //   console.log('before board', board)
   const filteredBoard = board.filter(s => !s)
-  //   console.log('after board', filteredBoard)
-  //   console.log('emptySpots length', filteredBoard.length)
-  //   console.log('filteredBoard', filteredBoard)
   return board.filter(s => {
     if (s !== 'X' && s !== 'O') {
       return true

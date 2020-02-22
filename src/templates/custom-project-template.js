@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Layout from '../components/Layout'
 import styles from '../css/template.module.css'
 import SEO from '../components/SEO'
-import TicTacToe from '../components/TicTacToe/Game'
+import TicTacToe from '../components/TicTacToe/TicTacToe'
 
 const CustomProjectTemplate = props => {
   return (

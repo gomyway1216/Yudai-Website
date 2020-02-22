@@ -9,26 +9,19 @@ const Symbol = {
   O: 'O',
 }
 
-const gameProps = {
-  humanSymbol: Symbol.O,
-  aiSymbol: Symbol.X,
-}
-
-// humanTurn
-// aiTurn
-
-// humanSymbol
-// aiSymbol
-
 const Game = props => {
-  // const humanTurn = 'X'
-  // const aiTurn = 'O'
   const squares = [0, 1, 2, 3, 4, 5, 6, 7, 8]
   const initialHistory = [{ squares: squares }]
   const [history, setHistory] = useState(initialHistory)
   // toggle between X and O
   const { humanSymbol, aiSymbol } = props
   const [isHumanTurn, setIsHumanTurn] = useState(humanSymbol === Symbol.X)
+
+  // is this a good way of writing code?
+  // const [isHumanTurn, setIsHumanTurn] = useState(Symbol.X)
+  // if (humanSymbol === Symbol.O) {
+  //   setIsHumanTurn(Symbol.X)
+  // }
 
   // set the number of steps
   const [stepNumber, setStepNumber] = useState(0)

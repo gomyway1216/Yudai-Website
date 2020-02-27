@@ -1,8 +1,8 @@
-import React from "react"
-import BlogCard from "./BlogCard"
-import Title from "../Title"
-import { useStaticQuery, graphql } from "gatsby"
-import styles from "../../css/blog.module.css"
+import React from 'react'
+import BlogCard from './BlogCard'
+import Title from '../Title'
+import { useStaticQuery, graphql } from 'gatsby'
+import styles from '../../css/blog.module.css'
 
 const getPosts = graphql`
   query {
@@ -18,6 +18,7 @@ const getPosts = graphql`
               ...GatsbyContentfulFluid
             }
           }
+          language
         }
       }
     }

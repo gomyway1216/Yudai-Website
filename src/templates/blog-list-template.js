@@ -1,11 +1,15 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/Layout"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
-import styles from "../css/blog.module.css"
-import BlogCard from "../components/Blog/BlogCard"
-import Title from "../components/Title"
-import SEO from "../components/SEO"
+import React from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../components/Layout'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import styles from '../css/blog.module.css'
+import BlogCard from '../components/Blog/BlogCard'
+import Title from '../components/Title'
+import SEO from '../components/SEO'
+import FormControl from '@material-ui/core/FormControl'
+import Select from '@material-ui/core/Select'
+import InputLabel from '@material-ui/core/InputLabel'
+import MenuItem from '@material-ui/core/MenuItem'
 
 const Blog = props => {
   const { currentPage, numPages } = props.pageContext
@@ -17,12 +21,35 @@ const Blog = props => {
     currentPage - 1 === 1 ? `/blogs/` : `/blogs/${currentPage - 1}`
   const nextPage = `/blogs/${currentPage + 1}`
 
+  const [language, setLanguage] = React.useState('All')
+
+  const handleChange = event => {
+    setLanguage(event.target.value)
+  }
+
   const { data } = props
   return (
     <Layout>
       <SEO title="Blogs" />
       <section className={styles.blog}>
         <Title title="latest" subtitle="posts" />
+
+        <div className={styles.language}>
+          <FormControl
+            style={{
+              width: 120,
+              marginRight: 100,
+            }}
+          >
+            <InputLabel>Language</InputLabel>
+            <Select value={language} onChange={handleChange}>
+              <MenuItem value={'All'}>All</MenuItem>
+              <MenuItem value={'English'}>English</MenuItem>
+              <MenuItem value={'Japanese'}>Japanese</MenuItem>
+            </Select>
+          </FormControl>
+        </div>
+
         <div className={styles.center}>
           {data.posts.edges.map(({ node }) => {
             return <BlogCard key={node.id} blog={node} />
@@ -40,7 +67,7 @@ const Blog = props => {
               <AniLink
                 key={i}
                 fade
-                to={`/blogs/${i === 0 ? "" : i + 1}`}
+                to={`/blogs/${i === 0 ? '' : i + 1}`}
                 className={
                   i + 1 === currentPage
                     ? `${styles.link} ${styles.active}`
@@ -80,6 +107,7 @@ export const query = graphql`
               ...GatsbyContentfulFluid
             }
           }
+          language
         }
       }
     }

@@ -51,6 +51,7 @@ const Blog = props => {
         </div>
 
         <div className={styles.center}>
+          {console.log('data.posts.edges', data.posts.edges)}
           {data.posts.edges.map(({ node }) => {
             return <BlogCard key={node.id} blog={node} />
           })}

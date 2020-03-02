@@ -186,7 +186,7 @@ const Profile = props => {
 
             <section>
               <div className={styles.information}>
-                <div className={styles.position}>Front-End Engineer</div>
+                <div className={styles.position}>Full Stack Engineer</div>
                 <div className={styles.subInformation}>
                   <div className={styles.company}>
                     UW-Madison College of Engineering
@@ -201,7 +201,7 @@ const Profile = props => {
               <p>
                 Building thick UI client for tutor scheduling system which
                 enables students to book sessions, and administrators to perform
-                auditing using React and JavaScript
+                auditing using React, JavaScript, and PHP
               </p>
             </section>
 

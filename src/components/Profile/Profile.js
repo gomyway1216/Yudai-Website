@@ -30,38 +30,41 @@ const Profile = props => {
             <h2>Introduction</h2>
 
             <div>
-              My name is Yudai, and I’m an English/Japanese bilingual studying
-              Computer Science, Mathematics, and Entrepreneurship at the
-              University of Wisconsin-Madison.
+              My name is Yudai Yaguchi, and I’m an English/Japanese bilingual
+              studying Computer Science, Mathematics, and Entrepreneurship at
+              the University of Wisconsin-Madison. I’m interested in the roles
+              for Software Engineering as I think both my experience with
+              end-to-end software development and leadership skills would be a
+              good asset.
               <br />
               <br />
-              I had very little conversation skills in English when I initially
-              came to the U.S, but have improved significantly since then. Much
-              of my improvement comes from the involvement I've had with other
-              organizations both on my college campus, and in Japan.
+              To achieve this, I have focused on learning application
+              development skills through projects and internships throughout my
+              college years. I have diversified my skillset by enrolling and
+              acing various computer science and business classes and have
+              developed strong teamwork and communication skills by being the
+              tech lead of an engineering student organization focused on
+              renewable energy projects.
               <br />
               <br />
-              On my college campus, I lead a tech team for a renewable energy
-              organization and worked on ways to improve widespread knowledge of
-              solar energy, as well as onboard and manage new members.
+              I have made it a point in my previous roles to keep active
+              communication between myself and the project shareholders, as I
+              highly value constant feedback.
               <br />
               <br />
-              In Tokyo, I volunteer with a venture group to write software to
-              analyze and improve their social events. My experience in the U.S.
-              has also allowed me to propose new ideas and perspectives to the
-              Japanese business world.
+              My most significant interest is full-stack engineering and
+              front-end engineering. To improve the skillset and contribute to
+              people, I am building a beverage ordering system for Venture Café
+              Tokyo as a volunteer. Besides, I am improving my portfolio/blog,
+              which exists to share my experiences and learnings as an
+              international student and software developer. I hope that others
+              who are in similar situations can benefit from this. I am mostly
+              using React, Node.js and GraphQL, and JavaScript for the projects.
               <br />
-              <br />
-              While I am unsure of my exact future endeavors, I do know that I
-              want to continue to help other students before I graduate, and
-              extend this to wherever I go from there.
-              <br />
-              <br />
-              This blog is meant to be a collection of the thoughts and
-              experiences I pick up along the way. I am passionate about
-              full-stack engineering. I used React, Node.js, JavaScript, GraphQL
-              for my personal projects (this blog included), as well as for my
-              university job.
+              <br />I take pride in my ongoing learning efforts and find joy in
+              extending this knowledge and experience to others. Given an
+              opportunity at the company I am hired, I would show the very same
+              traits.
               <br />
               <br />
               I am currently looking for a new grad Software Engineering
@@ -72,6 +75,13 @@ const Profile = props => {
               right corner redirect to my social media. Thank you for visiting
               my website!
             </div>
+            <br />
+            <a
+              href="https://drive.google.com/file/d/1CpCYjR1ID50ACrqggUo-1DEUmFl6dPpL/view?usp=sharing"
+              className={styles.resumeLink}
+            >
+              Link for downloading my resume
+            </a>
             <br />
             <br />
           </div>
@@ -146,8 +156,8 @@ const Profile = props => {
                 and QR code check-in
                 <br />
                 <br />
-                Creating web client using React, developing backend service with
-                GraphQL and Nodejs
+                Creating web client using React, JavaScript, developing backend
+                service with GraphQL and Nodejs
                 <br />
                 <br />
                 For more information, please visit{' '}
@@ -158,6 +168,27 @@ const Profile = props => {
                 >
                   here
                 </AniLink>
+              </p>
+            </section>
+
+            <section>
+              <div className={styles.information}>
+                <div className={styles.position}>Full Stack Engineer</div>
+                <div className={styles.subInformation}>
+                  <div className={styles.company}>
+                    UW-Madison College of Engineering
+                  </div>
+                  <span className={styles.duration}>
+                    April 2019 -{' '}
+                    <span className={styles.boldText}>Present</span>
+                  </span>
+                  <span className={styles.location}>Madison, WI</span>
+                </div>
+              </div>
+              <p>
+                Building thick UI client for tutor scheduling system which
+                enables students to book sessions, and administrators to perform
+                auditing using React, JavaScript, and PHP
               </p>
             </section>
 
@@ -181,27 +212,6 @@ const Profile = props => {
                 <br />
                 Introduced to Python and Data Science via research to improve
                 accuracy of company’s Ad selection machine learning model
-              </p>
-            </section>
-
-            <section>
-              <div className={styles.information}>
-                <div className={styles.position}>Full Stack Engineer</div>
-                <div className={styles.subInformation}>
-                  <div className={styles.company}>
-                    UW-Madison College of Engineering
-                  </div>
-                  <span className={styles.duration}>
-                    April 2019 -{' '}
-                    <span className={styles.boldText}>Present</span>
-                  </span>
-                  <span className={styles.location}>Madison, WI</span>
-                </div>
-              </div>
-              <p>
-                Building thick UI client for tutor scheduling system which
-                enables students to book sessions, and administrators to perform
-                auditing using React, JavaScript, and PHP
               </p>
             </section>
 
@@ -257,18 +267,8 @@ const Profile = props => {
                 </div>
               </div>
               <p>
-                Tutored a high school student by providing materials for high
-                school exams Mostly focused on reviewing the class materials and
-                homework for Math, Science, History, Reading Japanese, English
-                classes
-                <br />
-                <br />
-                Gave appropriate homework to prepare for midterm exams and final
-                exams. The student's score increased from the bottom to the
-                average among the same grade students
-                <br />
-                <br />
-                Taught time management techniques and entrance exam strategies
+                Provided comprehensive support for top high school students
+                including organizing the schedules
               </p>
             </section>
 
@@ -284,12 +284,8 @@ const Profile = props => {
                 </div>
               </div>
               <p>
-                Prepared small groups of students for exams and tailored
-                instructions to the students’ learning styles
-                <br />
-                <br />
-                Tutored several subjects, including Math, Science, History,
-                Reading Japanese, English and test-taking skills
+                Educated from elementary school to high school students with
+                many subjects
               </p>
             </section>
           </div>

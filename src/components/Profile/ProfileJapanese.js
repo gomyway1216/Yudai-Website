@@ -226,7 +226,7 @@ const Profile = props => {
                 </div>
               </div>
               <div className={styles.skills}>Tutoring</div>
-              <p>小学生から高校生までの個別指導</p>
+              <p>小学生から高校生までの様々な科目での個別指導</p>
             </section>
           </div>
 
@@ -353,7 +353,7 @@ const Profile = props => {
           </div>
 
           <div className={styles.organization}>
-            <h3>オーガナイゼーション</h3>
+            <h3>課外活動</h3>
             <hr />
 
             <section>

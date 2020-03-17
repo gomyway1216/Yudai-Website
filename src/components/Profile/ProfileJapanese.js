@@ -23,38 +23,20 @@ const Profile = props => {
         <div className={styles.right}>
           <div className={[styles.introduction, styles.item].join(' ')}>
             <h2>紹介</h2>
-            <h3>
-              こちらはまだ編集中なので、英語のわかる方は、英語版を参考にして頂ければと思います。
-            </h3>
             <div>
-              こんにちは。矢口雄大と申します。ウィスコンシン大学マディソン校でコンピューターサイエンスを専攻しながら数学と起業学をマイナーで勉強しています。
+              ソフトウェアエンジニアを目指すために、大学在籍中はプロジェクトやインターンシップを通してアプリケーションを開発するためのスキルを身に着けることに力を注ぎました。
+              様々なコンピューターサイエンスやビジネスのクラスを受講しそれぞれの学問を極めることで自分のスキルセットを広げたり、エンジニアの学生組織で再生可能エネルギーのプロジェクトにリーダーとして携わることで強固なチームワーク形成やコミュニケーションスキルを磨くことができました。プロジェクトを先導するにあたり、常にチームメンバーやプロジェクトに関わるステークホルダーと密にコミュニケションをとり、定期的にフィードバックを行うことに重点をおいて進めました。
               <br />
               <br />
-              元々アメリカに大学生から来た時、ほとんど英語は話せませんでしたが、大学に於いての、色々な活動や組織に参加し、自分が積極的に関わっていくことで、
-              日本語と同等のレベルのスキルを身に付けることが出来ました。他の国からの留学生も多く、文化や考え方が全く違う人が集まる環境で、
-              どうしたら自分にも他人にもプラスになるようなコミュニケーションが取れるのかをずっと考え、実践して来ました。
-              ナビゲーションバーに載っているソーシャルネットワーキング等をクリックしていただくか、またはContactページから気軽にご連絡ください。
-              僕のウェブサイトに訪問いただき、ありがとうございます。
+              私が最も興味があるのは、フルスタックエンジニアやフロントエンドエンジニアとして働くことです。スキルを磨き多くの人に貢献するために、今現在Venture
+              Café
+              Tokyoにてボランティアとして飲み物を注文・カウントするためのシステムを構築しています。また、自分のポートフォリオやブログも定期的に更新し、私の留学生として、そしソフトウェア開発者としての経験をシェアしています。
+              私と同様の境遇にある人たちにとって少しでも助けとなればと思い取り組んでおります。これらのプロジェクトでは、主に
+              ReactやNode.js, GraphQL, JavaScriptなどを用いています。
               <br />
               <br />
-              最近では、再生可能エネルギーについて活動している大学の組織のテクニカルチームのリーダーを務め、
-              新しく入ってくるメンバーがどうすれば学びながらチームに貢献できるか重視し、他のメンバーと協力ながらチームを牽引しました。
-              <br />
-              <br />
-              また、東京のVenture Cafe
-              Tokyoというグループに所属していて、夏休みや冬休みの間はアンバサダーとして、イベントの企画や準備、人と人とを繋げる役割を果たし、
-              現在はリモートで、より活動を便利にするソフトウェアを作成しています。アメリカでの生活のお陰で、
-              自分のユニークな考えを話し合いの場などで生かすことが出来、誇りに思っています。
-              <br />
-              <br />
-              大学卒業までには、人の役に立てるようなアプリ開発をしたいと思っており、
-              実際の仕事でも、ユーザーにとって何が有益なのかを考え、仕事を進めたいと思います。
-              <br />
-              <br />
-              僕はこのブログを通して、自分が学んでいく中での様々な考えや経験を共有し、誰かの助けになればと思っています。
-              僕はフルスタックの開発に非常に興味があり、React, Node.js,
-              JavaScript, GraphQLを
-              このブログの開発を含めたプロジェクトや大学での仕事等で使用しています。
+              私は常に学びを得るために努力を惜しまない自分の姿勢を誇りに思っていると同時に、知識を増やすことそしてその知識や経験を他の人と共有することに喜びを感じています。
+              私が働く会社では、それらの姿勢を持って全力で仕事に取り組んでいく所存です。
               <br />
               <br />
               僕は現在、アメリカで、ソフトウェアエンジニアのフルタイムを探しております。2020年5月に卒業予定で、その後はすぐに働けます。
@@ -65,7 +47,7 @@ const Profile = props => {
             </div>
             <br />
             <a
-              href="https://drive.google.com/uc?export=download&id=1qho_ioHcWKb5sfXr9mX3A3JLmV2cImKi"
+              href="https://drive.google.com/file/d/1CpCYjR1ID50ACrqggUo-1DEUmFl6dPpL/view?usp=sharing"
               className={styles.resumeLink}
             >
               英語版のレジュメのダウンロードリンクです。
@@ -124,6 +106,23 @@ const Profile = props => {
               <div className={styles.information}>
                 <div className={styles.position}>フルスタックエンジニア</div>
                 <div className={styles.subInformation}>
+                  <div className={styles.company}>Venture Café Tokyo</div>
+                  <span className={styles.duration}>2019年12月 - 現在</span>
+                  <span className={styles.location}>東京</span>
+                </div>
+              </div>
+              <div className={styles.skills}>Marketing, Communication</div>
+              <p>
+                主催イベントにて、ユーザーのドリンクをトラッキングするためのQRコードを使ったシステムの作成
+                <br />
+                <br />
+                フロントエンドは主にReact、JavaScript、バックエンドはGraphQL、Node.jsを使用
+              </p>
+            </section>
+            <section>
+              <div className={styles.information}>
+                <div className={styles.position}>フルスタックエンジニア</div>
+                <div className={styles.subInformation}>
                   <div className={styles.company}>
                     ウィスコンシン大学マディソン校
                   </div>
@@ -135,10 +134,8 @@ const Profile = props => {
               </div>
               <div className={styles.skills}>React, JS</div>
               <p>
-                チューターを管理するシステムのフロントエンドのコードを書いています。
-                <br />
-                <br />
-                バックエンドにおける、リクエストを受け取った際のロジックとフロントエンド側のAPIレスポンスに対する処理を作成しています。
+                学生がセッションの予約をしたり、管理者がチューターのスケジュール等を管理することのできるシステムのthick
+                UIをReact、JavaScript、PHPを用いて作成
               </p>
             </section>
 
@@ -159,12 +156,11 @@ const Profile = props => {
                 </div>
               </div>
               <p>
-                SMNが独自開発した、広告トラッキングシステムを用いて広告の用途などを表示、管理を行う、お客様用のコンソールの作成
+                広告を宣伝したい会社が使う用に広告のパフォーマンスを追跡するシステムをReact、Redux、TypeScriptを用いて作成
                 <br />
                 <br />
-                機械学習(サイキッドラーニング)を用いて、SMNの広告トラッキングシステムの改善や、集めたデータのより効率の良い使い方の研究
-                <br />
-                GitやBash、その他Terminalの使い方などをまとめたドキュメントを他のインターン生用に制作
+                会社が使用するアドセレクションの機械学習モデルの正確性を向上するために、PythonやData
+                Science面でのコンサルティングを提供
               </p>
             </section>
 
@@ -181,13 +177,7 @@ const Profile = props => {
               </div>
               <div className={styles.skills}>React, JS, Java</div>
               <p>
-                HTML、CSS、JavaScript、TypeScript、Node.js、jQuery、React.js、GraphQLの強化プログラムを終了
-                その知識を用いて、天気アプリやTwitterのクローンアプリ、レシピ紹介サイトを作成
-                <br />
-                <br />
-                被験者の動きを記録、また健康状態をクイズ形式で聞いた上でサーバー上にデータを管理するAndroidアプリを作成。
-                <br />
-                また、そのアプリをボイスコマンドで動くように機能を追加
+                患者の状態をモニタリングしたり、患者のエンゲージメントを向上するためのボイスコマンドの機能を搭載したアンドロイドの患者ケアアプリをJavaとSQLを使って作成
               </p>
             </section>
 
@@ -213,24 +203,6 @@ const Profile = props => {
 
             <section>
               <div className={styles.information}>
-                <div className={styles.position}>アンバサダー</div>
-                <div className={styles.subInformation}>
-                  <div className={styles.company}>Venture Café Tokyo</div>
-                  <span className={styles.duration}>2019年6月 - 現在</span>
-                  <span className={styles.location}>東京</span>
-                </div>
-              </div>
-              <div className={styles.skills}>Marketing, Communication</div>
-              <p>
-                Venture Cafe
-                Tokyoのミッションは、イノベーターたちを繋げ、次のビジネスに生み出し、加速していく環境づくりをしていくことです。
-                私たちのイベントでは、様々な方に登壇していただくセッションといろいろな方と繋がることのできるソーシャルスペースを提供しています。
-                運営の効率化のため、イベント参加者の飲んだ物を可視化し、管理するソフトウェアを作成しています。今後様々な機能を追加していく予定です。
-              </p>
-            </section>
-
-            <section>
-              <div className={styles.information}>
                 <div className={styles.position}>家庭教師</div>
                 <div className={styles.subInformation}>
                   <div className={styles.company}>自営業</div>
@@ -240,10 +212,7 @@ const Profile = props => {
               </div>
               <div className={styles.skills}>Tutoring</div>
               <p>
-                進学校に通っている高校生の家庭教師をしていました。ただ宿題を出すだけではなく、学校のスケジュール管理などを一緒に行い、全般的に勉強をサポートしました。
-                <br />
-                <br />
-                結果的に一番下の方だったその生徒の成績が学年の真ん中まで上がりました。
+                進学校に通っている高校生への、学校のスケジュール管理などを含む全面的なサポート
               </p>
             </section>
 
@@ -257,9 +226,7 @@ const Profile = props => {
                 </div>
               </div>
               <div className={styles.skills}>Tutoring</div>
-              <p>
-                小学生から高校生までの指導をたくさんの科目にわたって指導しました。
-              </p>
+              <p>小学生から高校生までの個別指導</p>
             </section>
           </div>
 
@@ -284,10 +251,11 @@ const Profile = props => {
                 </div>
               </div>
               <p>
-                Gatsby.jsを利用した、Websiteの作成 (このWebsiteです!)
+                自分の経験をシェアするためにポートフォリオやブログをReact,
+                GraphQL, GatsbyJSなどを用いてフルスタックで作成
                 <br />
                 <br />
-                データはContentfulにあり、GraphQLを使って持ってきています。
+                このWebsiteです！
               </p>
             </section>
             <section>
@@ -308,10 +276,7 @@ const Profile = props => {
                 プロジェクトページへ
               </AniLink>
               <p>
-                Androidで動く、日常の様々な行動を記録し、その行動によって仮想のお金をためる楽しいアプリ。自分の行動を効率化する為に作成しました。
-                <br />
-                <br />
-                グラフによって日々の行動と溜めたお金を可視化できます。
+                日常の様々なアクティビティを管理するためのバーチャルな報酬ベースのアンドロイドアプリをJavaやSQLを用いて作成
               </p>
             </section>
 
@@ -331,10 +296,7 @@ const Profile = props => {
                 プロジェクトページへ
               </AniLink>
               <p>
-                Androidで動く、独自のアルゴリズムを使用した、強いAIを持つアプリを作りました。周りの約95％の人に勝つ事ができました。
-                <br />
-                <br />
-                ボードサイズ、先攻後攻、AIのレベルの設定、また一手戻す機能を備えています。
+                Javaを用いて作成したカスタムAIの勝率が95%の五目並べのアプリをアンドロイドのプレイストアでリリース
               </p>
             </section>
 
@@ -354,10 +316,7 @@ const Profile = props => {
                 プロジェクトページへ
               </AniLink>
               <p>
-                コンソール上で動く強いAI持ったオセロアプリを作成しました。
-                <br />
-                <br />
-                将来、また新しいタイプのAIを作れるような簡単な設計にしました。
+                コマンドラインで調整可能なAIを搭載したオセロのボードゲームをC++で作成
               </p>
             </section>
           </div>
@@ -384,12 +343,8 @@ const Profile = props => {
                 プロジェクトページへ
               </AniLink>
               <p>
-                YOLOv3アルゴリズムに合金の映像を与えることで,TEMビデオで欠陥を表示します。
-                <br />
-                見つかった欠陥の数と大きさやどうやって生まれたかを計測すると、95％の正確性と低い遅延を達成しました。
-                <br />
-                <br />
-                これはTEMビデオで初めて深層学習を用いたプロジェクトで、様々な研究プロジェクトに応用する事が出来ます。
+                合金欠陥検出におけるディープラーニングの研究プロジェクトにおいて、PythonやMATLABを用いて画像解析などを行い、
+                YOLOv3のアルゴリズムにて0.95 F1 scoresを達成
               </p>
               <a href={`https://skunkworks.engr.wisc.edu/`}>
                 UW-Madison Informatics Skunkworksへのリンク
@@ -413,10 +368,7 @@ const Profile = props => {
                 </div>
               </div>
               <p>
-                学校に設置されたソーラーパネルから得られた、電力発生量などを表示するダッシュボードの作成
-                <br />
-                <br />
-                テックチームのリーダーとして、アメリカ全土の電力についてのリサーチプロジェクトを引率
+                ウェブサイト、太陽光発電のダッシュボードのプロトタイプの作成や新規部員の技術指導
               </p>
             </section>
 

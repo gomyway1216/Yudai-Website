@@ -40,7 +40,7 @@ const Navbar = () => {
             )
           })}
         </ul>
-        <a href="https://drive.google.com/file/d/1cYfnzv1pBDb3TvMNw85JZm2MEUpeC2gK/view?usp=sharing">
+        <a href="https://drive.google.com/file/d/1CpCYjR1ID50ACrqggUo-1DEUmFl6dPpL/view?usp=sharing">
           Resume
         </a>
         <div className={styles.navSocialLinks}>

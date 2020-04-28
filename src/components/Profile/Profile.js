@@ -235,28 +235,6 @@ const Profile = props => {
 
             <section>
               <div className={styles.information}>
-                <div className={styles.position}>
-                  Technology Help desk & Business management Intern
-                </div>
-                <div className={styles.subInformation}>
-                  <div className={styles.company}>ITA, Inc.</div>
-                  <span className={styles.duration}>May 2018 - June 2018</span>
-                  <span className={styles.location}>Itasca, Illinois</span>
-                </div>
-              </div>
-              <p>
-                Set up computers, a phone system, and network systems and
-                checked security for local Japanese companies
-                <br />
-                <br />
-                Helped 3 Japanese companies expand to the U.S. by providing
-                translations and local business and legal knowledge Made an
-                Android Application to teach interns about company practice
-              </p>
-            </section>
-
-            <section>
-              <div className={styles.information}>
                 <div className={styles.position}>Private Tutor</div>
                 <div className={styles.subInformation}>
                   <div className={styles.company}>Self Employed</div>

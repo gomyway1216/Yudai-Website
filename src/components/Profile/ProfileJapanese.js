@@ -167,7 +167,7 @@ const Profile = props => {
             <section>
               <div className={styles.information}>
                 <div className={styles.position}>
-                  フルスタックエンジニアインターン
+                  Androidエンジニアインターン
                 </div>
                 <div className={styles.subInformation}>
                   <div className={styles.company}>Kinetikos</div>
@@ -178,26 +178,6 @@ const Profile = props => {
               <div className={styles.skills}>React, JS, Java</div>
               <p>
                 患者の状態をモニタリングしたり、患者のエンゲージメントを向上するためのボイスコマンドの機能を搭載したアンドロイドの患者ケアアプリをJavaとSQLを使って作成
-              </p>
-            </section>
-
-            <section>
-              <div className={styles.information}>
-                <div className={styles.position}>
-                  テクニカルサポート、ビジネスマーケティングインターン
-                </div>
-                <div className={styles.subInformation}>
-                  <div className={styles.company}>ITA, Inc.</div>
-                  <span className={styles.duration}>2018年5月 - 2018年6月</span>
-                  <span className={styles.location}>イリノイ州アイタスカ</span>
-                </div>
-              </div>
-              <div className={styles.skills}>Java, Marketing, Japanese</div>
-              <p>
-                コンピューターや電話、ネットワークシステムの設定や更新を中小企業において提供
-                <br />
-                <br />
-                日本の企業のアメリカ進出における様々な情報を翻訳、法律、文化といった面でアメリカでの経験をもとに提供
               </p>
             </section>
 
